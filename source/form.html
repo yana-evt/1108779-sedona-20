@@ -1,10 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item_active">
+            <a class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html" class="main-nav__link">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html" class="main-nav__link">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">HTML Academy</a>
+          </li>
+        </ul>
+        <button type="button" class="main-nav__button-close">Закрыть меню</button>
+      </nav>
+      <a class="header__logo">
+        <img src="https://via.placeholder.com/150x150" width="20" height="20" alt="Логотип сайта">
+      </a>
+      <!-- Опять же: картинка svg с текстом sedona, а при стилизации background-image фото с природой? -->
+      <img src="https://via.placeholder.com/150x150" width="100" height="20" alt="Добро пожаловать в Седону">
+    </header>
+    <main class="page-main">
+      <section class="feedback">
+        <h1 class="feedback__header">Оставьте свой отзыв</h1>
+        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+
+        <section class="feedback__acquaintance">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="feedback__acquaintance-header">Представьтесь:</h2>
+
+              <label class="feedback__name">Имя*:
+                <input type="text" name="name" placeholder="Петр" class="feedback__name-input">
+              </label>
+
+              <label class="feedback__surname">Фамилия*:
+                <input type="text" name="surname" placeholder="Иванов" class="feedback__surname-input">
+              </label>
+
+              <label class="feedback__second-name">Отчество:
+                <input type="text" name="second-name" placeholder="Александрович" class="feedback__second-name-input">
+              </label>
+
+            <h2 class="feedback__contacts-header">Контактная информация:</h2>
+
+              <label class="feedback__phone">Контактный телефон*:
+                <input type="number" name="phone" placeholder="Введите телефон" class="feedback__phone-input">
+                <button class="icon__phone"></button>
+              </label>
+
+              <label class="feedback__email">Электроная почта*:
+                <input type="email" name="email" placeholder="Введите e-mail" class="feedback__email-input">
+                <button class="icon__envelope"></button>
+              </label>
+
+            <h2 class="feedback__impression-header">Ваше общее впечатление:</h2>
+
+              <label class="feedback__impression">Скорее положительное
+                <input type="radio" name="impression" value="positive" class="feedback__impression-radiobutton" checked>
+              </label>
+
+              <label class="feedback__impression">Скорее отрицательное
+                <input type="radio" name="impression" value="negative" class="feedback__impression-radiobutton">
+              </label>
+
+              <label class="feedback__impression">Затрудняюсь ответить
+                <input type="radio" name="impression" value="neutral" class="feedback__impression-radiobutton">
+              </label>
+
+            <h2 class="feedback__sights-header">Посещенные достопримечательности:</h2>
+
+              <label class="feedback__sight-name">Мост Дьявола
+                <input type="checkbox" class="feedback__sight-checkbox" checked>
+              </label>
+
+              <label class="feedback__sight-name">Гора-колокол
+                <input type="checkbox" class="feedback__sight-checkbox" checked>
+              </label>
+
+              <label class="feedback__sight-name">Слайд-парк
+                <input type="checkbox" class="feedback__sight-checkbox" checked>
+              </label>
+
+              <label class="feedback__sight-name">Красные скалы
+                <input type="checkbox" class="feedback__sight-checkbox">
+              </label>
+
+            <h2 class="feedback__emotions-header">Опишите свои эмоции:</h2>
+
+              <label class="feedback__emotions">Текст письма:
+              <textarea type="text" name="emotions" placeholder="Опишите подробно все свои восторги" class="feedback__emotions-text"></textarea>
+              </label>
+
+            <button class ="feedback__button-send" type="submit">Отправить отзыв</button>
+
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p class="footer-hashtag">#VISITSEDONA</p>
+      <ul class="footer-social__list">
+        <li class="footer-social__item">Twitter
+          <a href="" class="footer-social__link">
+            <svg></svg>
+          </a>
+        </li>
+        <li class="footer-social__item">Facebook
+          <a href="" class="footer-social__link">
+            <svg></svg>
+          </a>
+        </li>
+        <li class="footer-social__item">Youtube
+          <a href="" class="footer-social__link">
+            <svg></svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-copyright__text">Разработано</p>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer-copyright__link">
+        <svg></svg>
+      </a>
+    </footer>
+  </body>
 </html>
