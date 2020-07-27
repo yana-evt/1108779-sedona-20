@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -43,7 +44,7 @@
       </section>
 
       <section class="advantages">
-        <h2 class="advantages__header">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="advantages__heading">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
         <ol class="advantages__list">
@@ -57,15 +58,15 @@
           <li class="advantages__additional-group">
             <ul class="advantages__additional-list additional-list">
               <li class="additional-list__item">
-                <h3 class="additional-list__header">Жилье</h3>
+                <h3 class="additional-list__heading">Жилье</h3>
                 <p class="additional-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="additional-list__item">
-                <h3 class="additional-list__header">Сувениры</h3>
+                <h3 class="additional-list__heading">Сувениры</h3>
                 <p class="additional-list__text">Не только китайского, но и местного производства!</p>
               </li>
               <li class="additional-list__item">
-                <h3 class="additional-list__header">Еда</h3>
+                <h3 class="additional-list__heading">Еда</h3>
                 <p class="additional-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
             </ul>
@@ -101,23 +102,29 @@
       </section>
       <section class="sedona-map">
         <h2 class="visually-hidden">Где располагается Седона?</h2>
-        <img src="https://via.placeholder.com/150x150" width="100" height="50" alt="Карта с указанием местоположения Седоны">
+        <img src="https://via.placeholder.com/150x150" width="100" height="50" alt="Карта с указанием местоположения Седоны" class="sedona-map__image">
+        <span class="sedona-map__marker"></span>
       </section>
     </main>
     <footer class="footer">
+
       <p class="footer-hashtag">#VISITSEDONA</p>
+
       <ul class="footer-social__list">
-        <li class="footer-social__item">Twitter
+        <li class="footer-social__item">
+          <span class="visually-hidden">Twitter</span>
           <a href="" class="footer-social__link">
             <svg></svg>
           </a>
         </li>
-        <li class="footer-social__item">Facebook
+        <li class="footer-social__item">
+          <span class="visually-hidden">Facebook</span>
           <a href="" class="footer-social__link">
             <svg></svg>
           </a>
         </li>
-        <li class="footer-social__item">Youtube
+        <li class="footer-social__item">
+          <span class="visually-hidden">Youtube</span>
           <a href="" class="footer-social__link">
             <svg></svg>
           </a>
