@@ -1,16 +1,34 @@
-@import url("./source/less/global/variables.less");
 
 .main-nav__list {
   list-style: none;
 }
 
 .main-nav__link {
-  color: @white;
+  color: @color-white;
   text-decoration: none;
-  background-color: @sky-blue;
+  background-color: @color-bg-sky-blue;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
+  font-size: @fs-heading-small;
+  line-height: @lh-additional;
   padding-top: 10px;
   padding-bottom: 5px;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:focus {
+    background-color: @color-bg-deep-sky-blue;
+  }
+
+  &:hover {
+    background-color: @color-bg-deep-sky-blue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @color-bg-dark-sky-blue;
+  }
+
+  &:not([href]) {
+    color: @color-white;
+    background-color: @color-bg-sky-blue;
+  }
 }

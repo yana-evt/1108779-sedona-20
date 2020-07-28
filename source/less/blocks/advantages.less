@@ -1,10 +1,10 @@
 
 .advantages__heading {
-  font-size: 18px;
+  font-size: @fs-heading-small;
 }
 
 .advantages__name {
-  font-size: 18px;
+  font-size: @fs-heading-small;
 }
 
 .advantages__list {
@@ -12,25 +12,16 @@
 }
 
 .advantages__item {
-  color: @white;
-  background-color: @sky-blue;
+  color: @color-white;
+  background-color: @color-bg-sky-blue;
 }
 
 .advantages__item--secondary {
-  color: @black;
-  background-color: @ordinary-grey;
+  color: @color-black;
+  background-color: @color-ordinary-grey;
 }
 
 .advantages__number::before {
   counter-increment: hyphen;
   content: "\2013 \2004 №" counter(hyphen) "\2004 \2013";
 }
-
-.additional-list {
-  list-style: none;
-
-  &__item {
-    text-align: left;
-  }
-}
-
