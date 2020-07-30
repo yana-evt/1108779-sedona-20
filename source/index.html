@@ -8,16 +8,16 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__logo-toggle-wrapper">
+        <a class="header__logo">
+          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона">
+        </a>
 
-      <a class="header__logo">
-        <img src="https://via.placeholder.com/150x150" width="20" height="20" alt="Логотип сайта">
-      </a>
-
-      <button class="header__main-nav-toggle" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
-
-      <nav class="header__main-nav main-nav">
+        <button class="header__main-nav-toggle" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
+      <nav class="header__main-nav main-nav main-nav--closed">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a class="main-nav__link">Главная</a>
@@ -40,7 +40,10 @@
 
       <section class="main__intro">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <img class="main__intro-visual main__intro-visual--large" src="https://via.placeholder.com/150x150" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+        <div class="one">
+          <div class="two"></div>
+        </div>
+        <!--<img class="main__intro-visual main__intro-visual--large" src="https://via.placeholder.com/150x150" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">-->
       </section>
 
       <section class="advantages">
