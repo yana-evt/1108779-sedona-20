@@ -1,0 +1,52 @@
+
+html {
+  height: 100%;
+  font-size: @fs-main;
+  font-family: @main-font;
+  line-height: @lh-main;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body {
+  min-height: 100%;
+  background-color: @color-white;
+  color: @color-black;
+  counter-reset: hyphen;
+  min-width: @mobile-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+::placeholder {
+  font-family: @main-font;
+  font-size: @fs-heading-small;
+  font-weight: bold;
+  color: @color-black;
+}

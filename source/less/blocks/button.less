@@ -1,0 +1,32 @@
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  font-size: @fs-heading-small;
+  color: @color-white;
+  background-color: @color-bg-sky-blue;
+
+  &:focus {
+    background-color: @color-bg-deep-sky-blue;
+  }
+
+  &:hover {
+    background-color: @color-bg-deep-sky-blue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @color-bg-dark-sky-blue;
+  }
+
+  &:disabled {
+    background-color: @color-light-grey;
+  }
+
+  &:not([href]) {
+    color: @color-white;
+    background-color: @color-bg-sky-blue;
+  }
+}

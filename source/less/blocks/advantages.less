@@ -1,0 +1,27 @@
+
+.advantages__heading {
+  font-size: @fs-heading-small;
+}
+
+.advantages__name {
+  font-size: @fs-heading-small;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  color: @color-white;
+  background-color: @color-bg-sky-blue;
+}
+
+.advantages__item--secondary {
+  color: @color-black;
+  background-color: @color-ordinary-grey;
+}
+
+.advantages__number::before {
+  counter-increment: hyphen;
+  content: "\2013 \2004 №" counter(hyphen) "\2004 \2013";
+}
