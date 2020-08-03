@@ -29,6 +29,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -49,4 +50,25 @@ img {
   font-size: @fs-heading-small;
   font-weight: bold;
   color: @color-black;
+}
+
+@media (max-width: @tablet-width) {
+  body {
+    width: @mobile-width;
+    padding: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    width: @tablet-width;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: @desktop-width;
+    padding: 0 15px;
+  }
 }

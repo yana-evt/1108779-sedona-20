@@ -4,7 +4,19 @@
 }
 
 .feedback__button-send {
-  font-size: @fs-heading-medium;
+  margin: 0 auto;
+  display: block;
+  font-size: @fs-heading-small;
   text-transform: uppercase;
+  padding-top: 22px;
+  padding-bottom: 14px;
   border: none;
+
+}
+
+@media (max-width: @tablet-width) {
+  .feedback__button-send {
+    margin-bottom: 78px;
+    width: 280px;
+  }
 }
