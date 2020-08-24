@@ -8,28 +8,37 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo-toggle-wrapper">
-        <a href="index.html" class="header__logo">
-          <img src="https://via.placeholder.com/150x150" width="20" height="20" alt="Логотип сайта">
-        </a>
+      <nav class="header__main-nav main-nav main-nav--closed container">
 
-        <button class="header__main-nav__toggle" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </div>
-      <nav class="header__main-nav main-nav main-nav--closed">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--index">
+        <div class="header__logo-toggle-wrapper">
+          <a class="header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+              <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+            </picture>
+          </a>
+
+          <button class="header__main-nav-toggle" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </div>
+
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item">
             <a href="index.html" class="main-nav__link">Главная</a>
           </li>
-          <li class="main-nav__item main-nav__item--photo">
-            <a href="photo.html" class="main-nav__link">Фото и видео</a>
+          <li class="main-nav__item">
+            <a href="photo.html" class="main-nav__link">Фото&nbspи&nbspвидео</a>
           </li>
-          <li class="main-nav__item main-nav__item--active main-nav__item--form">
-            <a class="main-nav__link">Форма отзыва</a>
+        </ul>
+
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Форма&nbspотзыва</a>
           </li>
-          <li class="main-nav__item main-nav__item--academy">
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML Academy</a>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
           </li>
         </ul>
       </nav>
@@ -37,19 +46,22 @@
     </header>
     <main class="main">
 
-      <section class="main__intro">
+      <section class="main__intro main__intro--small">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <img class="main__intro-visual main__intro-visual--small" src="https://via.placeholder.com/150x150" width="100" height="20" alt="Sedona">
+        <img class="main__intro-visual main__intro-visual--small" src="./img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </section>
 
-      <section class="main__feedback feedback">
+      <section class="main__feedback feedback container">
+
         <h2 class="feedback__heading">Оставьте свой отзыв</h2>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <span class="feedback__text--break">а также о посещенных вами достопримечательностях</span></p>
+
+
         <form action="https://echo.htmlacademy.ru" method="post" class="form">
 
-            <fieldset class="form__group group-input">
+            <fieldset class="form__group group-input group-input__user">
 
-              <legend class="group-input__heading">Представьтесь:</legend>
+              <legend class="group-input__heading group-input__heading--user">Представьтесь:</legend>
 
               <div class="group-input__wrapper">
                 <label for="name" class="group-input__name">Имя*:</label>
@@ -66,31 +78,26 @@
 
             </fieldset>
 
-            <fieldset class="form__group group-input">
+            <fieldset class="form__group group-input group-input__contacts">
 
-              <legend class="group-input__heading">Контактная информация:</legend>
+              <legend class="group-input__heading group-input__heading--contacts">Контактная информация:</legend>
 
-              <label for="phone" class="group-input__name group-input__name--contacts">Контактный телефон*:</label>
+              <div class="wrapper--contacts">
+                <label for="phone" class="group-input__name group-input__name--contacts">
+                  <span class="group-input__name--main">Контактный телефон*:</span>
+                  <span class="group-input__name--additional">Tелефон*:</span>
+                </label>
 
-              <div class="group-input__wrapper--icon">
-                <input id="phone" type="tel" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Введите телефон" minlength="12" maxlength="12" class="group-input__input" required>
-                <div class="group-input__icon-phone">
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
-                    <g id="Page-1">
-                      <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
-                        <g id="phone" transform="translate(85.000000, 126.000000)">
-                          <path id="Shape" fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
+                <div class="group-input__wrapper--phone">
+                  <input id="phone" type="tel" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Введите телефон" minlength="12" maxlength="12" class="group-input__input group-input__input--phone" required>
+                </div>
+
+                <label for="email" class="group-input__name group-input__name--contacts">Электронная почта*:</label>
+
+                <div class="group-input__wrapper--email">
+                  <input id="email" type="email" name="email" placeholder="Введите e-mail" class="group-input__input group-input__input--email" required>
                 </div>
               </div>
-
-              <label for="email" class="group-input__name group-input__name--contacts">Электронная почта*:</label>
-                <input id="email" type="email" name="email" placeholder="Введите e-mail" class="group-input__input" required>
-              <span class="group-input__icon-envelope"></span>
-
             </fieldset>
 
             <fieldset class="form__group group-radio">
@@ -98,62 +105,73 @@
               <legend class="group-radio__heading">Ваше общее впечатление:</legend>
 
               <div class="group-input__wrapper--radio">
-              <label for="positive" class="group-radio__name">Скорее положительное</label>
-                <input id="positive" type="radio" name="impression" value="positive" class="group-radio__input" checked>
+
+                <input id="positive" type="radio" name="impression" value="positive" class="group-radio__input visually-hidden" checked>
+                <label for="positive" class="group-radio__name">Скорее положительное</label>
+
               </div>
 
               <div class="group-input__wrapper--radio">
-              <label for="negative" class="group-radio__name">Скорее отрицательное</label>
-                <input id="negative" type="radio" name="impression" value="negative" class="group-radio__input">
+
+                <input id="negative" type="radio" name="impression" value="negative" class="group-radio__input visually-hidden" checked disabled>
+                <label for="negative" class="group-radio__name">Скорее отрицательное</label>
+
               </div>
 
               <div class="group-input__wrapper--radio">
-              <label for="neutral" class="group-radio__name">Затрудняюсь ответить</label>
-                <input id="neutral" type="radio" name="impression" value="neutral" class="group-radio__input">
+
+                <input id="neutral" type="radio" name="impression" value="neutral" class="group-radio__input visually-hidden">
+                <label for="neutral" class="group-radio__name">Затрудняюсь ответить</label>
+
               </div>
+
             </fieldset>
 
             <fieldset class="form__group group-check">
 
-              <legend class="group-check__heading">Посещенные достопримечательности:</legend>
-
+              <legend class="group-check__heading">Посещенные <span class="group-check__heading--break">достопримечательности:</span></legend>
+              <div class="group-check__wrapper">
               <div class="group-input__wrapper--check">
-              <label for="devils-bridge" class="group-check__name">Мост Дьявола</label>
-                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="group-check__input" checked>
+                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="group-check__input visually-hidden" checked>
+                <label for="devils-bridge" class="group-check__name">Мост Дьявола</label>
               </div>
 
               <div class="group-input__wrapper--check">
-              <label for="mountain-bell" class="group-check__name">Гора-колокол</label>
-                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="group-check__input" checked>
+                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="group-check__input visually-hidden" disabled>
+                <label for="mountain-bell" class="group-check__name">Гора-Колокол</label>
               </div>
 
               <div class="group-input__wrapper--check">
-              <label for="slide-park" class="group-check__name">Слайд-парк</label>
-                <input id="slide-park" type="checkbox" name="slide-park" class="group-check__input" checked>
+                <input id="slide-park" type="checkbox" name="slide-park" class="group-check__input visually-hidden" checked disabled>
+                <label for="slide-park" class="group-check__name">Слайд-парк</label>
               </div>
 
               <div class="group-input__wrapper--check">
-              <label for="red-rocks" class="group-check__name">Красные скалы</label>
-                <input id="red-rocks" type="checkbox" name="red-rocks" class="group-check__input">
+                <input id="red-rocks" type="checkbox" name="red-rocks" class="group-check__input visually-hidden">
+                <label for="red-rocks" class="group-check__name">Красные скалы</label>
               </div>
+              </div>
+
             </fieldset>
 
-            <fieldset class="form__group group-input">
+            <fieldset class="form__group group-input group-input--text">
 
-              <legend class="group-input__heading">Опишите свои эмоции:</legend>
+              <legend class="group-input__heading group-input__heading--text">Опишите свои эмоции:</legend>
 
               <label for="emotions-letter" class="group-input__name" aria-label="Текст письма:"></label>
-                <textarea id="emotions-letter" type="text" name="emotions" placeholder="Опишите подробно все свои восторги" class="group-input__text"></textarea>
+                <textarea id="emotions-letter" type="text" name="emotions" placeholder="Опишите подробно все свои восторги" class="group-input__textarea"></textarea>
 
             </fieldset>
-
-            <button class="button feedback__button-send" type="submit">Отправить отзыв</button>
-
+            <div class="form-wrapper">
+              <button class="button feedback__button-send" type="submit">Отправить отзыв</button>
+            </div>
+          <p class="required">* &ndash; обязательные поля</p>
           </form>
+
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer container">
 
       <p class="footer__hashtag">#VISITSEDONA</p>
 

@@ -1,8 +1,28 @@
 
+.hotel-search {
+  padding-top: 17px;
+  padding-bottom: 62px;
+}
+
+.hotel-search__heading {
+  font-size: @fs-heading-medium;
+}
+
+.hotel-search__text {
+  padding-bottom: 26px;
+}
+
+.hotel-search__button {
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-right: 48px;
+  padding-left: 47px;
+}
+
 @media (min-width: @tablet-width) {
   .hotel-search {
-    margin: 0 auto;
-    padding-top: 44px;
+    padding-top: 58px;
+    padding-bottom: 72px;
   }
 
   .hotel-search__heading {
@@ -28,6 +48,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .hotel-search {
+    padding-bottom: 80px;
+  }
+
   .hotel-search__heading {
     font-size: @fs-heading-big;
   }
@@ -35,28 +59,4 @@
   .hotel-search__text {
     padding-bottom: 42px;
   }
-}
-
-@media (max-width: @tablet-width) {
-  .hotel-search {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 3px;
-  }
-
-  .hotel-search__heading {
-    font-size: @fs-heading-medium;
-  }
-
-  .hotel-search__text {
-    padding-bottom: 26px;
-  }
-
-  .hotel-search__button {
-    padding-top: 16px;
-    padding-bottom: 17px;
-    padding-right: 48px;
-    padding-left: 47px;
-  }
-
 }

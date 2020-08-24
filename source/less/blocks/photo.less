@@ -10,6 +10,7 @@
 
 .photo__creator {
   text-transform: none;
+  margin: 0;
 }
 
 .photo__likes {
@@ -18,4 +19,108 @@
 
 .gallery__item {
   text-align: left;
+}
+
+.photo__likes {
+  padding-left: 37px;
+  padding-top: 11px;
+  display: block;
+}
+
+.wrapper__gallery {
+  position: relative;
+  padding-bottom: 37.5px;
+}
+
+.photo__icon-like {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  color: @color-black;
+  opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "z z"
+      "y x"
+      "w .";
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .gallery__item:first-child {
+    grid-area: z;
+  }
+
+  .photo__image--sunset {
+    width: 100%;
+  }
+
+  .photo__image--cactus {
+    width: 100%;
+  }
+
+  .photo__image--roads {
+    width: 100%;
+  }
+
+  .photo__image--bridge {
+    width: 100%;
+  }
+
+  .photo__link {
+    position: relative;
+  }
+
+  .photo__link::after {
+    content: "";
+    background-color: @color-bg-form-grey;
+    width: 100%;
+    min-height: 80px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    z-index: -1;
+  }
+
+  .wrapper__gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 14px;
+  }
+
+  .photo__creator {
+    margin-right: auto;
+    padding-left: 20px;
+  }
+
+  .photo__name {
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+
+  .photo__likes {
+    padding-right: 20px;
+    margin-top: -10px;
+  }
+
+  .wrapper__gallery {
+    position: relative;
+  }
+
+  .photo__icon-like {
+    display: block;
+    width: 23px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    right: 10%;
+  }
 }

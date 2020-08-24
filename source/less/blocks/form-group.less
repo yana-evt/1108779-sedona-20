@@ -1,14 +1,208 @@
 
-@media (max-width: @tablet-width) {
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.group-input__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+
+.group-input__name {
+  margin-right: 14px;
+}
+
+.group-input__name--contacts {
+  display: block;
+  text-align: left;
+  padding-left: 22px;
+  padding-bottom: 8px;
+  padding-top: 12px;
+}
+.group-input__input {
+  position: relative;
+}
+
+.group-input__wrapper--phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.group-input__wrapper--radio {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.group-radio__name {
+  margin-bottom: 43px;
+}
+
+.group-input__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+}
+
+.group-check__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+}
+
+.group-radio__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.group-input__wrapper--check {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.group-check__name {
+  margin-bottom: 53px;
+}
+
+.group-check__heading {
+  margin-bottom: 32px;
+}
+
+.group-input__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 0;
+  margin-top: -17px;
+}
+
+.group-input__textarea::placeholder {
+  padding-left: 20px;
+  padding-top: 18px;
+  line-height: 25px;
+}
+
+@media (min-width: @tablet-width) {
   .form {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "a b"
+      "c c"
+      "d d"
+      "e e"
+      "f g";
   }
 
-  .form__group {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0;
+  .group-radio {
+    grid-area: a;
+    text-align: left;
+    padding-left: 55px;
+  }
+
+  .group-input__user {
+    grid-area: b;
+    padding-right: 40px;
+    padding-left: 60px;
+  }
+
+  .group-input__contacts {
+    grid-area: c;
+  }
+
+  .group-check {
+    grid-area: d;
+    padding-bottom: 30px;
+  }
+
+  .group-input--text {
+    grid-area: e;
+  }
+
+  .feedback__button-send {
+    grid-area: f;
+  }
+
+  .required {
+    grid-area: g;
+    padding-top: 55px;
+    padding-left: 125px;
+  }
+
+  .feedback__heading {
+    font-size: @fs-heading-big;
+    margin-bottom: 30px;
+  }
+
+  .group-input__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+  }
+
+  .group-radio__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+  }
+
+  .group-check__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 27px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 74px;
+      left: -185px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 74px;
+      right: -185px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
+  .group-check__heading--break {
+    display: block;
+  }
+
+  .group-input__heading--user {
+    text-align: left;
+    padding-bottom: 40px;
+    padding-left: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -60px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
   }
 
   .group-input__wrapper {
@@ -24,75 +218,250 @@
     margin-right: 14px;
   }
 
-  .group-input__name--contacts {
-    display: block;
-    text-align: left;
-    padding-left: 22px;
-    padding-bottom: 8px;
-    padding-top: 12px;
-  }
-  .group-input__input {
-    position: relative;
-  }
-
-  .group-input__icon-phone {
-    background-color: @color-light-grey;
-
-    display: flex;
-    width: 58px;
-    height: 58px;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
-
-  .group-input__wrapper--icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
   .group-input__wrapper--radio {
+    margin-bottom: 51px;
+  }
+
+  .group-input__contacts {
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+    text-align: left;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
 
-  .group-radio__name {
-    margin-bottom: 43px;
+  .group-input__heading--contacts {
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: -182px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: -182px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
   }
 
-  .group-radio__heading {
-    margin-bottom: 32px;
+  .group-input__wrapper--phone {
+    margin-bottom: 25px;
+  }
+
+  .group-check__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    row-gap: 10px;
+
+    padding-left: 135px;
+    padding-right: 75px;
   }
 
   .group-input__wrapper--check {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: flex-start;
   }
 
   .group-check__name {
-    margin-bottom: 53px;
+    padding-left: 70px;
+  }
+
+  .group-input__heading--text {
+    position: relative;
+    padding-bottom: 45px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
+  .group-input--text {
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-input__user {
+    padding-right: @padding-desktop;
+    padding-left: 80px;
+  }
+
+  .group-input__heading--user {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -80px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
+  }
+
+  .group-input__heading--contacts {
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: -339px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: -339px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
+  .group-input__name--contacts {
+    display: inline;
+  }
+
+  .group-input__wrapper--phone {
+    width: 30%;
+    margin-right: 73px;
+  }
+
+  .group-input__wrapper--email {
+    width: 30%;
+  }
+  .wrapper--contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-top: 49px;
+    padding-left: 39px;
   }
 
   .group-check__heading {
-    margin-bottom: 32px;
+    position: relative;
+    padding-top: 28px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 53px;
+      left: -341px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 53px;
+      right: -341px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+// Раньше ты не советовала использовать space-between, здесь это тоже неприменимо? И почему?
+  .group-check__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
   }
 
-  .group-input__text {
-    width: 100%;
-    min-height: 160px;
-    padding: 0;
-    margin-top: -17px;
+  .group-input__heading--text {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
   }
 
-  .group-input__text::placeholder {
-    padding-left: 19px;
-    padding-top: 15px;
-    line-height: 25px;
+  .group-input--text {
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
+  }
+
+  .required {
+    padding-left: 220px;
+  }
+
+  .footer {
+    padding-top: 20px;
   }
 }

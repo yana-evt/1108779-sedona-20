@@ -1,11 +1,67 @@
 
-.group-check__heading {
-  font-size: @fs-heading-small;
-  font-weight: bold;
-}
-
 .group-check__name {
   font-size: @fs-heading-small;
   font-weight: bold;
   text-transform: none;
+  position: relative;
+  padding-left: 80px;
+
+  &::before {
+    margin-left: -80px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -18px;
+    width: 56px;
+    height: 56px;
+    background-color: @color-bg-form-grey;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 17px;
+    top: 2px;
+    background-image: url("../../img/icon-tick.svg");
+    width: 23px;
+    height: 16px;
+  }
+}
+
+.group-check__input + .group-check__name::after {
+  content: none;
+}
+
+.group-check__input:checked + .group-check__name::after {
+  content: "";
+}
+
+.group-check__input:hover + .group-check__name::before {
+  background-color: @color-disabled-grey;
+}
+
+.group-check__input:focus + .group-check__name::before {
+  background-color: @color-disabled-grey;
+}
+
+.group-check__input:active + .group-check__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-check__input:active + .group-check__name::after {
+  opacity: 0.3;
+}
+
+.group-check__input:disabled + .group-check__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-check__input:disabled:checked + .group-check__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-check__input:disabled:checked + .group-check__name::after {
+  opacity: 0.3;
 }

@@ -1,11 +1,104 @@
-
-.group-radio__heading {
-  font-size: @fs-heading-small;
-  font-weight: bold;
-}
-
+// Не получилось сделать радиобаттоны доступными с клавиатуры
 .group-radio__name {
   font-size: @fs-heading-small;
   font-weight: bold;
   text-transform: none;
+  position: relative;
+  padding-left: 80px;
+
+
+  &::before {
+    margin-left: -80px;
+    position: absolute;
+    top: -18px;
+    content: "";
+    display: block;
+    background-color: @color-bg-form-grey;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-color: @color-dark-radiobutton;
+    border-radius: 50%;
+  }
+}
+
+.group-radio__input + .group-radio__name::after {
+  content: none;
+}
+
+.group-radio__input:checked + .group-radio__name::after {
+  content: "";
+}
+
+.group-radio__input:hover + .group-radio__name::before {
+  background-color: @color-disabled-grey;
+}
+
+.group-radio__input:focus + .group-radio__name::before {
+  background-color: @color-disabled-grey;
+}
+
+.group-radio__input:active + .group-radio__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-radio__input:active + .group-radio__name::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.group-radio__input:disabled + .group-radio__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-radio__input:disabled:checked + .group-radio__name::before {
+  background-color: @color-bg-check-radio-active;
+}
+
+.group-radio__input:disabled:checked + .group-radio__name::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.group-radio__heading {
+  padding-top: 46px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .group-radio {
+    padding-left: @padding-tablet;
+  }
+
+  .group-radio__heading {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 73px;
+  }
+
+  .group-radio__name {
+    padding-left: 77px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-radio {
+    padding-left: @padding-desktop;
+  }
+
+  .group-radio__heading {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 73px;
+    padding-left: 80px;
+  }
 }

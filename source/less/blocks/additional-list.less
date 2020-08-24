@@ -6,6 +6,7 @@
 
 .additional-list__item {
   text-align: left;
+  position: relative;
 }
 
 .additional-list__heading {
@@ -17,15 +18,80 @@
   line-height: @lh-small;
 }
 
+.advantages__additional-group {
+  padding-left: 70px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-top: 36px;
+}
+
+.additional-list__heading {
+  font-size: @fs-heading-small;
+  margin-bottom: 15px;
+}
+
+.additional-list__text {
+  margin-bottom: 27px;
+}
+// Не получается воспользоваться св-вом color для изменения цвета, пришлось менять сами svg; это св-во не работает с псевдоэлементами? Только с svg напрямую?
+.additional-list__item--motel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  background-image: url("../../img/icon-house.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 39px 37px;
+  width: 39px;
+  height: 37px;
+}
+
+.additional-list__item--souvenirs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: -45px;
+  background-image: url("../../img/icon-gift.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 32px 38px;
+  width: 32px;
+  height: 38px;
+}
+
+.additional-list__item--food::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -50px;
+  background-image: url("../../img/icon-burger.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 40px 35px;
+  width: 40px;
+  height: 35px;
+}
+
 @media (min-width: @tablet-width) {
+  .advantages__additional-group {
+    padding-top: 160px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
   .additional-list {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 
-    padding-top: 159px;
-    padding-bottom: 60px;
+    //padding-top: 60px;
+    //padding-bottom: 60px;
   }
 
   .additional-list__heading {
@@ -36,17 +102,7 @@
 
   .additional-list__text {
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .additional-list__text--first {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .additional-list__text--last {
-    padding-left: 30px;
-    padding-right: 30px;
+    margin: 0;
   }
 
   .additional-list__item {
@@ -57,45 +113,77 @@
     order: 1;
     padding-top: 10px;
   }
+
+  .additional-list__item--motel::before {
+    top: -100px;
+    left: 87px;
+    background-size: 75px 72px;
+    width: 75px;
+    height: 72px;
+  }
+
+  .additional-list__item--souvenirs::before {
+    top: -103px;
+    left: 95px;
+    background-size: 64px 75px;
+    width: 64px;
+    height: 75px;
+  }
+
+  .additional-list__item--food::before {
+    top: -97px;
+    left: 85px;
+    background-size: 76px 68px;
+    width: 76px;
+    height: 68px;
+  }
+
+  .additional-list__item--motel {
+    margin-left: -7px;
+  }
+
+  .additional-list__item--food {
+    margin-left: 7px;
+  }
+
+  .additional-list__text--food-break {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .additional-list {
-    padding-bottom: 81px;
+  .advantages__additional-group {
+    padding-bottom: 80px;
   }
 
   .additional-list__heading {
     font-size: @fs-heading-medium;
   }
-  .additional-list__text--first {
-    padding-left: 55px;
-    padding-right: 55px;
+
+  .additional-list__text--motel-break {
+    display: block;
   }
 
-  .additional-list__text--last-break {
+  .additional-list__text--souvenirs-break {
     display: block;
   }
 
   .additional-list__item--last {
     padding-top: 0;
   }
-}
 
-@media (max-width: @tablet-width) {
-  .advantages__additional-group {
-    padding-left: 70px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    padding-top: 36px;
+  .additional-list__item--motel::before {
+    top: -100px;
+    left: 157px;
   }
 
-  .additional-list__heading {
-    font-size: @fs-heading-small;
-    margin-bottom: 15px;
+  .additional-list__item--souvenirs::before {
+    top: -103px;
+    left: 167px;
   }
 
-  .additional-list__text {
-    margin-bottom: 27px;
+  .additional-list__item--food::before {
+    top: -97px;
+    left: 157px;
   }
-
 }
