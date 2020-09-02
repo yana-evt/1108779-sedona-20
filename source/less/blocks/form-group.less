@@ -24,6 +24,7 @@
   padding-bottom: 8px;
   padding-top: 12px;
 }
+
 .group-input__input {
   position: relative;
 }
@@ -96,46 +97,44 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
-      "a b"
-      "c c"
-      "d d"
-      "e e"
-      "f g";
+      "radio user"
+      "contacts contacts"
+      "check check"
+      "text text"
+      "button required";
   }
 
   .group-radio {
-    grid-area: a;
+    grid-area: radio;
     text-align: left;
     padding-left: 55px;
   }
 
   .group-input__user {
-    grid-area: b;
+    grid-area: user;
     padding-right: 40px;
     padding-left: 60px;
   }
 
   .group-input__contacts {
-    grid-area: c;
+    grid-area: contacts;
   }
 
   .group-check {
-    grid-area: d;
+    grid-area: check;
     padding-bottom: 30px;
   }
 
   .group-input--text {
-    grid-area: e;
+    grid-area: text;
   }
 
-  .feedback__button-send {
-    grid-area: f;
+  .form-wrapper {
+    grid-area: button;
   }
 
   .required {
-    grid-area: g;
-    padding-top: 55px;
-    padding-left: 125px;
+    grid-area: required;
   }
 
   .feedback__heading {
@@ -233,6 +232,7 @@
   }
 
   .group-input__heading--contacts {
+    width: 100%;
     text-align: center;
     margin-bottom: 19px;
     margin-top: 30px;
@@ -243,7 +243,7 @@
       display: block;
       position: absolute;
       top: 18px;
-      left: -182px;
+      left: 0;
       background-color: @color-dark-grey-border;
       width: 123px;
       height: 1px;
@@ -254,7 +254,7 @@
       display: block;
       position: absolute;
       top: 18px;
-      right: -182px;
+      right: 0;
       background-color: @color-dark-grey-border;
       width: 123px;
       height: 1px;
@@ -341,6 +341,7 @@
   }
 
   .group-input__heading--contacts {
+    width: 100%;
     text-align: center;
     margin-bottom: 19px;
     margin-top: 30px;
@@ -351,7 +352,7 @@
       display: block;
       position: absolute;
       top: 18px;
-      left: -339px;
+      left: 0;
       background-color: @color-dark-grey-border;
       width: 280px;
       height: 1px;
@@ -362,32 +363,28 @@
       display: block;
       position: absolute;
       top: 18px;
-      right: -339px;
+      right: 0;
       background-color: @color-dark-grey-border;
       width: 280px;
       height: 1px;
     }
   }
 
-  .group-input__name--contacts {
-    display: inline;
-  }
-
   .group-input__wrapper--phone {
-    width: 30%;
-    margin-right: 73px;
+    width: 33%;
+    margin-right: 80px;
   }
 
   .group-input__wrapper--email {
-    width: 30%;
+    width: 33%;
   }
+
   .wrapper--contacts {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: baseline;
     padding-top: 49px;
-    padding-left: 39px;
   }
 
   .group-check__heading {
@@ -416,7 +413,7 @@
       height: 1px;
     }
   }
-// Раньше ты не советовала использовать space-between, здесь это тоже неприменимо? И почему?
+
   .group-check__wrapper {
     display: flex;
     flex-direction: row;
@@ -455,10 +452,6 @@
   .group-input--text {
     padding-left: @padding-desktop;
     padding-right: @padding-desktop;
-  }
-
-  .required {
-    padding-left: 220px;
   }
 
   .footer {

@@ -1,39 +1,37 @@
 
 .sedona-map {
-  padding: 0;
-  position: relative;
-}
-
-.sedona-map__marker {
-  position: absolute;
-  top: 162px;
-  left: 146px;
-  background-image: url("../../img/icon-map-marker.svg");
-  background-position: 0 0;
+  background-color: @color-white;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
-  width: 27px;
-  height: 27px;
-  z-index: 2;
+  height: 350px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    background-image: url("../img/icon-map-marker.svg");
+    width: 27px;
+    height: 27px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .sedona-map__marker {
-    left: 370px;
-  }
-
-  .sedona-map__image {
-    width: 768px;
-    height: 350px;
+  .sedona-map {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
   }
 }
 
 @media (min-width: @desktop-width) {
-  .sedona-map__marker {
-    left: 587px;
-  }
-
-  .sedona-map__image {
-    width: 1200px;
-    height: 350px;
+  .sedona-map {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
   }
 }
+

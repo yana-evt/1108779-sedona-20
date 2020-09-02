@@ -1,4 +1,18 @@
 
+.group-check {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    border-bottom: 1px solid @color-disabled-grey;
+    width: @mobile-width;
+  }
+}
+
 .group-check__name {
   font-size: @fs-heading-small;
   font-weight: bold;
@@ -24,17 +38,18 @@
     position: absolute;
     left: 17px;
     top: 2px;
-    background-image: url("../../img/icon-tick.svg");
+    background-image: url("../img/icon-tick.svg");
     width: 23px;
     height: 16px;
   }
 }
 
 .group-check__input + .group-check__name::after {
-  content: none;
+  display: none;
 }
 
 .group-check__input:checked + .group-check__name::after {
+  display: block;
   content: "";
 }
 
@@ -64,4 +79,11 @@
 
 .group-check__input:disabled:checked + .group-check__name::after {
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+
+  .group-check::after {
+    display: none;
+  }
 }

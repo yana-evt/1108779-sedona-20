@@ -7,45 +7,91 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <nav class="header__main-nav main-nav main-nav--closed container">
+  <div class="body-wrapper">
+  <header class="header">
 
-        <div class="header__logo-toggle-wrapper">
-          <a class="header__logo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-              <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-              <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-            </picture>
-          </a>
+    <nav class="header__main-nav main-nav main-nav--closed container">
 
-          <button class="header__main-nav-toggle" type="button">
-            <span class="visually-hidden">Меню</span>
-          </button>
-        </div>
+      <a href="index.html" class="header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+        </picture>
+      </a>
 
-        <ul class="main-nav__list main-nav__list--left">
-          <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
-          </li>
-        </ul>
+      <button class="header__main-nav-toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
 
-        <ul class="main-nav__list main-nav__list--right">
-          <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
-          </li>
-        </ul>
-      </nav>
+    </nav>
 
-    </header>
+    <nav class="header__main-nav main-nav main-nav--nojs container">
 
-    <main class="main">
+      <ul class="main-nav__list main-nav__list--left">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="index.html" class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--right">
+        <li class="main-nav__item">
+          <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
+        </li>
+      </ul>
+
+      <a href="index.html" class="header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+        </picture>
+      </a>
+    </nav>
+
+    <nav class="header__main-nav main-nav main-nav--opened container">
+
+      <ul class="main-nav__list main-nav__list--left">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="index.html" class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--right">
+        <li class="main-nav__item">
+          <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
+        </li>
+      </ul>
+
+      <a href="index.html" class="header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+        </picture>
+      </a>
+
+      <button class="header__main-nav-toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+    </nav>
+
+  </header>
+
+    <main class="main main--photo">
 
       <section class="main__intro main__intro--small">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -80,7 +126,6 @@
               </svg>
             </div>
             <span class="photo__likes">1350</span>
-          </div>
           </div>
         </figure>
 
@@ -221,12 +266,12 @@
       </section>
     </main>
 
-    <footer class="footer container">
+    <footer class="footer">
 
       <p class="footer__hashtag">#VISITSEDONA</p>
 
-      <ul class="footer-social__list">
-        <li class="footer-social__item">
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
           <span class="visually-hidden">Twitter</span>
           <a href="" class="footer-social__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
@@ -238,7 +283,7 @@
             </svg>
           </a>
         </li>
-        <li class="footer-social__item">
+        <li class="footer__social-item">
           <span class="visually-hidden">Facebook</span>
           <a href="" class="footer-social__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
@@ -246,7 +291,7 @@
             </svg>
           </a>
         </li>
-        <li class="footer-social__item">
+        <li class="footer__social-item">
           <span class="visually-hidden">Youtube</span>
           <a href="" class="footer-social__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
@@ -264,5 +309,6 @@
         </a>
       </div>
     </footer>
+  </div>
   </body>
 </html>

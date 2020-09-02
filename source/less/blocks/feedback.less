@@ -1,4 +1,13 @@
 
+.main--form {
+  background-color: @color-white;
+}
+
+.main__intro--small {
+  background-color: @color-white;
+  z-index: 0;
+}
+
 .feedback__heading {
   font-size: @fs-heading-small;
   margin-top: 37px;
@@ -7,9 +16,6 @@
 
 .feedback__text {
   line-height: @lh-medium;
-  border-bottom: 1px solid @color-disabled-grey;
-  margin-left: -20px;
-  margin-right: -20px;
   padding-bottom: 17px;
 }
 
@@ -22,7 +28,7 @@
   padding-bottom: 14px;
   border: none;
   margin-bottom: 78px;
-  width: 280px;
+  width: 100%;
 }
 
 .required {
@@ -45,11 +51,20 @@
   }
 
   .feedback__button-send {
-    margin-left: 40px;
-    margin-top: 50px;
     padding-top: 22px;
     padding-bottom: 16px;
-    width: 324px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-wrapper {
+    padding-left: @padding-tablet;
+  }
+
+  .required {
+    padding-right: @padding-tablet;
+    text-align: right;
+    width: 100%;
   }
 }
 
@@ -67,10 +82,19 @@
   }
 
   .feedback__button-send {
-    margin-left: 100px;
-    margin-top: 50px;
     padding-top: 22px;
     padding-bottom: 16px;
-    width: 480px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-wrapper {
+    padding-left: @padding-desktop;
+  }
+
+  .required {
+    padding-right: @padding-desktop;
+    text-align: right;
+    width: 100%;
   }
 }

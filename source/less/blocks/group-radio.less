@@ -1,4 +1,19 @@
 // Не получилось сделать радиобаттоны доступными с клавиатуры
+
+.group-radio {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    border-bottom: 1px solid @color-disabled-grey;
+    width: @mobile-width;
+  }
+}
+
 .group-radio__name {
   font-size: @fs-heading-small;
   font-weight: bold;
@@ -6,11 +21,10 @@
   position: relative;
   padding-left: 80px;
 
-
   &::before {
-    margin-left: -80px;
     position: absolute;
     top: -18px;
+    left: 0;
     content: "";
     display: block;
     background-color: @color-bg-form-grey;
@@ -76,6 +90,10 @@
 @media (min-width: @tablet-width) {
   .group-radio {
     padding-left: @padding-tablet;
+
+    &::after {
+      display: none;
+    }
   }
 
   .group-radio__heading {

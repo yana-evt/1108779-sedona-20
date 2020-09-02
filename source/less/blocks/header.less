@@ -1,49 +1,114 @@
 
 .header {
+  background-color: @color-white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.header__logo-toggle-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0;
-}
-
-.header__main-nav {
-  order: -1;
-}
-
 .header__logo {
-  position: absolute;
-  height: 84px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.main-nav--nojs .header__logo {
+  margin: 0 auto;
+}
+
+.main-nav--opened .header__logo {
+  margin: 0 auto;
+}
+
+
+.header__main-nav-toggle {
+  bottom: 14px;
+  display: block;
+  width: 23px;
+  margin-right: 20px;
+  margin-left: -43px;
+  height: 22px;
   background-color: @color-transparent;
-  order: 0;
-  margin-right: 66px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
 
-  @media (min-width: @tablet-width) {
+.header__main-nav-toggle::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: @color-main;
+  box-shadow:
+    0 9px 0 0 @color-main,
+    0 18px 0 0 @color-main;
+}
+
+.header__main-nav-toggle:hover::before {
+  background-color: fade(@color-main, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@color-main, 60%),
+    0 18px 0 0 fade(@color-main, 60%);
+}
+
+.header__main-nav-toggle:focus::before {
+  background-color: fade(@color-main, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@color-main, 60%),
+    0 18px 0 0 fade(@color-main, 60%);
+}
+
+.header__main-nav-toggle:active::before {
+  background-color: fade(@color-main, 30%);
+  box-shadow:
+    0 9px 0 0 fade(@color-main, 30%),
+    0 18px 0 0 fade(@color-main, 30%);
+}
+
+.main-nav--opened .header__main-nav-toggle::before {
+  display: none;
+}
+
+.main-nav--opened .header__main-nav-toggle {
+  position: absolute;
+  bottom: 278px;
+  right: 0;
+}
+
+.main-nav--opened .header__main-nav-toggle::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  background-image: url("../img/icon-cross.svg");
+  width: 22px;
+  height: 22px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .header__logo {
+    width: 102px;
     height: 84px;
-    background-color: @color-transparent;
-    margin-left: 42px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 97px;
-    background-color: @color-transparent;
-    right: 460px;
-    left: 430px;
+    z-index: 1;
   }
 }
 
 @media (min-width: @desktop-width) {
+
+  .header__logo {
+    width: 187px;
+    height: 97px;
+    z-index: 1;
+  }
+
   .logo {
     width: 187px;
     height: 97px;
   }
 }
-
-

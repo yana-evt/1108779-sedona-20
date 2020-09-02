@@ -1,4 +1,8 @@
 
+.advantages {
+  background-color: @color-white;
+}
+
 .advantages__heading {
   margin: 0;
   font-size: @fs-heading-small;
@@ -65,12 +69,22 @@
   padding-top: 40px;
 }
 
-.advantages__image--first {
-  margin-bottom: -9px;
+.advantages__wrapper--image-first {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
 }
 
-.advantages__image--second {
-  margin-bottom: -9px;
+.advantages__wrapper--image-second {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
 }
 
 .advantages__wrapper--first {
@@ -81,7 +95,7 @@
   position: absolute;
   content: "";
   display: block;
-  background-image: url("../../img/bg-triangle.svg");
+  background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: 0 -22px;
   width: @mobile-width;
@@ -89,13 +103,48 @@
 }
 
 @media (min-width: @tablet-width) {
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "one one one"
+      "add add add"
+      "two two two"
+      "three four five";
+  }
+
+  .advantages__item--first {
+    grid-area: one;
+  }
+
+  .advantages__additional-group {
+    grid-area: add;
+  }
+
+  .advantages__item--second {
+    grid-area: two;
+  }
+
+  .advantages__item--third {
+    grid-area: three;
+  }
+
+  .advantages__item--fourth {
+    grid-area: four;
+  }
+
+  .advantages__item--fifth {
+    grid-area: five;
+  }
+// Это треугольник, который есть только в мобильной версии
+  .advantages__wrapper--first::before {
+    display: none;
+  }
+
   .advantages__heading {
     font-size: @fs-heading-medium;
     padding-top: 45px;
-  }
-
-  .advantages__wrapper--first::before {
-    display: none;
   }
 
   .advantages__name {
@@ -109,10 +158,13 @@
   }
 
   .advantages__item {
+    width: 100%;
+    min-height: 256px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: hidden;
   }
 
   .advantages__name-break {
@@ -127,23 +179,29 @@
     margin-left: 31px;
   }
 
-  .advantages__wrapper--first {
-    width: 33.33%;
+  .advantages__wrapper--image-first {
+    width: 66.67%;
+    background-image: url("../img/main-city-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
   }
 
-  .advantages__image--first {
-    width: 512px;
-    height: 256px;
+  .advantages__wrapper--image-second {
+    width: 66.67%;
+    background-image: url("../img/main-bridge-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--first {
+    width: 33.33%;
   }
 
   .advantages__wrapper--second {
     width: 33.33%;
     order: 1;
-  }
-
-  .advantages__image--second {
-    width: 512px;
-    height: 256px;
   }
 }
 
@@ -168,7 +226,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    height: 256px;
+    min-height: 256px;
     overflow: hidden;
   }
 
@@ -188,21 +246,25 @@
     width: 33.33%;
   }
 
-  .advantages__image--first {
-    width: 800px;
-    height: 400px;
-    margin-top: -70px;
+  .advantages__wrapper--image-first {
+    width: 66.67%;
+    background-image: url("../img/main-city-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--image-second {
+    width: 66.67%;
+    background-image: url("../img/main-bridge-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
   }
 
   .advantages__wrapper--second {
     width: 33.33%;
     order: 1;
-  }
-
-  .advantages__image--second {
-    width: 800px;
-    height: 400px;
-    margin-top: -15px;
   }
 
   .advantages__wrapper--second .advantages__description {

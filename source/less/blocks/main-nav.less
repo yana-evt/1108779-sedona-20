@@ -1,9 +1,10 @@
-
+// У меня не работают ссылки вообще никакие: ни кнопки, ни внутри навигации на другие страницы, ни на страницу интенсива. Что я наделала?)
 .main-nav {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-items: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   position: relative;
@@ -30,19 +31,6 @@
   display: grid;
   grid-template-rows: repeat(4, min-content);
   grid-template-columns: 100%;
-}
-
-.main-nav__list--left {
-  order: -1;
-}
-
-.main-nav__list--right {
-  order: 0;
-}
-
-.header__logo-toggle-wrapper {
-  order: 1;
-  padding-left: 88px;
 }
 
 .main-nav__link {
@@ -72,71 +60,7 @@
   }
 }
 
-.header__main-nav-toggle {
-  margin-top: 17px;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 23px;
-  height: 22px;
-  background-color: @color-transparent;
-  cursor: pointer;
-  border: none;
-  position: relative;
-}
-
-.header__main-nav-toggle::before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  width: 23px;
-  height: 4px;
-  background-color: @color-main;
-  box-shadow:
-    0 9px 0 0 @color-main,
-    0 18px 0 0 @color-main;
-}
-
-.header__main-nav-toggle:hover::before {
-  background-color: fade(@color-main, 60%);
-  box-shadow:
-    0 9px 0 0 fade(@color-main, 60%),
-    0 18px 0 0 fade(@color-main, 60%);
-}
-
-.header__main-nav-toggle:focus::before {
-  background-color: fade(@color-main, 60%);
-  box-shadow:
-    0 9px 0 0 fade(@color-main, 60%),
-    0 18px 0 0 fade(@color-main, 60%);
-}
-
-.header__main-nav-toggle:active::before {
-  background-color: fade(@color-main, 30%);
-  box-shadow:
-    0 9px 0 0 fade(@color-main, 30%),
-    0 18px 0 0 fade(@color-main, 30%);
-}
-
-.header__logo {
-  position: relative;
-}
-
 @media (min-width: @tablet-width) {
-  .header__logo {
-    width: 102px;
-    height: 84px;
-  }
-
-  .logo {
-    margin-left: 10px;
-  }
-
-  .header__main-nav-toggle {
-    display: none;
-  }
 
   .main-nav {
     display: flex;
@@ -153,12 +77,6 @@
     order: 1;
   }
 
-  .header__logo-toggle-wrapper {
-    order: 0;
-    padding: 0;
-    position: relative;
-  }
-
   .main-nav__list {
     padding-top: 16px;
     width: @tablet-width;
@@ -166,12 +84,13 @@
   }
 
   .main-nav__list--left {
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    padding-left: 50px;
+    padding-left: 40px;
   }
 
   .main-nav__list--left .main-nav__item {
@@ -182,12 +101,14 @@
     margin-right: 0;
   }
   .main-nav__list--right {
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 
-    padding-right: 27px;
+    padding-right: 20px;
+    margin-left: auto;
   }
 
   .main-nav__list--right .main-nav__item:last-child {
@@ -240,13 +161,17 @@
   .main-nav::after {
     display: none;
   }
+
+  .main-nav--closed {
+    display: none;
+  }
+
+  .main-nav--opened {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .header__logo {
-    width: 187px;
-    height: 97px;
-  }
 
   .main-nav {
     display: flex;
@@ -262,7 +187,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    padding-left: 90px;
+    padding-left: 83px;
   }
 
   .main-nav__list--left .main-nav__item {
@@ -280,7 +205,7 @@
     justify-content: flex-end;
     align-items: flex-start;
 
-    padding-right: 70px;
+    padding-right: 61px;
   }
 
   .main-nav__list--right .main-nav__item {
@@ -290,11 +215,12 @@
   .main-nav__list--right .main-nav__item:last-child {
     margin-left: 140px;
   }
-// Логотип отдельно от своего же контейнера, почему так? Его даже абсолютно не спозиционировать. А контейнер по центру стоит между двумя списками меню, где надо.
-  .header__logo-toggle-wrapper {
-    order: 0;
-    padding: 0;
-    position: relative;
+
+  .main-nav--closed {
+    display: none;
   }
 
+  .main-nav--opened {
+    display: none;
+  }
 }
