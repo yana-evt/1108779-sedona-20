@@ -1,4 +1,4 @@
-// У меня не работают ссылки вообще никакие: ни кнопки, ни внутри навигации на другие страницы, ни на страницу интенсива. Что я наделала?)
+
 .main-nav {
   text-align: center;
   display: flex;
@@ -61,64 +61,6 @@
 }
 
 @media (min-width: @tablet-width) {
-
-  .main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .main-nav__list--left {
-    order: -1;
-  }
-
-  .main-nav__list--right {
-    order: 1;
-  }
-
-  .main-nav__list {
-    padding-top: 16px;
-    width: @tablet-width;
-    margin: 0 auto;
-  }
-
-  .main-nav__list--left {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    padding-left: 40px;
-  }
-
-  .main-nav__list--left .main-nav__item {
-    margin-right: 75px;
-  }
-
-  .main-nav__list--left .main-nav__item:last-child {
-    margin-right: 0;
-  }
-  .main-nav__list--right {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-
-    padding-right: 20px;
-    margin-left: auto;
-  }
-
-  .main-nav__list--right .main-nav__item:last-child {
-    margin-left: 50px;
-  }
-
-  .main-nav__list--right .main-nav__item:first-child {
-    margin-left: 0;
-  }
-
   .main-nav__link {
     text-decoration: none;
     color: @color-black;
@@ -158,69 +100,8 @@
       opacity: 0.3;
     }
   }
+
   .main-nav::after {
-    display: none;
-  }
-
-  .main-nav--closed {
-    display: none;
-  }
-
-  .main-nav--opened {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-
-  .main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .main-nav__list--left {
-    order: -1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    padding-left: 83px;
-  }
-
-  .main-nav__list--left .main-nav__item {
-    margin-right: 160px;
-  }
-
-  .main-nav__list--left .main-nav__item:last-child {
-    margin-right: 0;
-  }
-
-  .main-nav__list--right {
-    order: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    padding-right: 61px;
-  }
-
-  .main-nav__list--right .main-nav__item {
-    margin-left: 0;
-  }
-
-  .main-nav__list--right .main-nav__item:last-child {
-    margin-left: 140px;
-  }
-
-  .main-nav--closed {
-    display: none;
-  }
-
-  .main-nav--opened {
     display: none;
   }
 }

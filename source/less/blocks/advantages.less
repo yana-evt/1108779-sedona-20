@@ -6,6 +6,8 @@
 .advantages__heading {
   margin: 0;
   font-size: @fs-heading-small;
+  padding-top: 34px;
+  padding-bottom: 29px;
 }
 
 .advantages__heading-break {
@@ -14,16 +16,21 @@
 
 .advantages__text {
   margin: 0;
+  padding-bottom: 34px;
 }
 
 .advantages__name {
   font-size: @fs-heading-small;
   margin: 0;
+  padding-top: 49px;
+  padding-bottom: 9px;
 }
 
 .advantages__description {
   line-height: @lh-small;
   margin: 0;
+  padding-top: 14px;
+  padding-bottom: 37px;
 }
 
 .advantages__list {
@@ -44,25 +51,6 @@
 .advantages__number::before {
   counter-increment: hyphen;
   content: "\2014 \2004 №" counter(hyphen) "\2004 \2014";
-}
-
-.advantages__heading {
-  padding-top: 34px;
-  padding-bottom: 29px;
-}
-
-.advantages__text {
-  padding-bottom: 34px;
-}
-
-.advantages__name {
-  padding-top: 49px;
-  padding-bottom: 9px;
-}
-
-.advantages__description {
-  padding-top: 14px;
-  padding-bottom: 37px;
 }
 
 .advantages__wrapper--second .advantages__name {
@@ -93,6 +81,9 @@
 
 .advantages__wrapper--first::before {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   content: "";
   display: block;
   background-image: url("../img/bg-triangle.svg");
@@ -100,10 +91,10 @@
   background-position: 0 -22px;
   width: @mobile-width;
   height: 37px;
+  margin: auto;
 }
 
 @media (min-width: @tablet-width) {
-
   .advantages__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -137,7 +128,7 @@
   .advantages__item--fifth {
     grid-area: five;
   }
-// Это треугольник, который есть только в мобильной версии
+
   .advantages__wrapper--first::before {
     display: none;
   }

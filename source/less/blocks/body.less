@@ -1,21 +1,13 @@
 
 .body-wrapper {
   background-color: @color-bg-form-grey;
-  width: @mobile-width;
-  margin: 0 auto;
-  z-index: -2;
-}
-
-@media (min-width: @tablet-width) {
-  .body-wrapper {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @media (min-width: @desktop-width) {
   .body-wrapper {
     max-width: @desktop-width;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
   }
 }
-

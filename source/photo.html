@@ -8,88 +8,43 @@
   </head>
   <body>
   <div class="body-wrapper">
-  <header class="header">
+    <header class="header header--nojs">
 
-    <nav class="header__main-nav main-nav main-nav--closed container">
+      <nav class="header__main-nav main-nav container">
 
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item main-nav__item--active">
+            <a href="index.html" class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
+          </li>
+        </ul>
 
-      <button class="header__main-nav-toggle" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item">
+            <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
+          </li>
+        </ul>
 
-    </nav>
+        <a href="index.html" class="header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+            <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+          </picture>
+        </a>
 
-    <nav class="header__main-nav main-nav main-nav--nojs container">
+        <button class="header__main-nav-toggle" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
 
-      <ul class="main-nav__list main-nav__list--left">
-        <li class="main-nav__item main-nav__item--active">
-          <a href="index.html" class="main-nav__link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
-        </li>
-      </ul>
+      </nav>
 
-      <ul class="main-nav__list main-nav__list--right">
-        <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
-        </li>
-      </ul>
-
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
-    </nav>
-
-    <nav class="header__main-nav main-nav main-nav--opened container">
-
-      <ul class="main-nav__list main-nav__list--left">
-        <li class="main-nav__item main-nav__item--active">
-          <a href="index.html" class="main-nav__link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link">Фото&nbspи&nbspвидео</a>
-        </li>
-      </ul>
-
-      <ul class="main-nav__list main-nav__list--right">
-        <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Форма&nbspотзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
-        </li>
-      </ul>
-
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
-
-      <button class="header__main-nav-toggle" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
-
-    </nav>
-
-  </header>
+    </header>
 
     <main class="main main--photo">
 
@@ -101,7 +56,7 @@
       <h2 class="photo-video__heading container">Фото и видео</h2>
       <p class="photo-video__text container">Не можете решить на путешествие из&#8209;за курса? Фотографии помогут вам забыть о политике и экономике.</p>
 
-      <section class="gallery container">
+      <section class="gallery">
         <figure class="gallery__item photo">
           <a href="" class="photo__link photo__link--sunset">
             <picture>
@@ -112,21 +67,21 @@
           </a>
           <div class="photo__background"></div>
           <figcaption class="photo__name">Неродные просторы</figcaption>
-          <div class="wrapper__gallery">
             <p class="photo__creator">Автор фото: Борис</p>
-            <div class="photo__icon-like">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
-                <g id="Page-1">
-                  <g id="Core" transform="translate(-295.000000, -464.000000)">
-                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
-                      <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+            <div class="wrapper__gallery--like">
+              <div class="photo__icon-like">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                  <g id="Page-1">
+                    <g id="Core" transform="translate(-295.000000, -464.000000)">
+                      <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                        <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                      </g>
                     </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
+              </div>
+              <span class="photo__likes">1350</span>
             </div>
-            <span class="photo__likes">1350</span>
-          </div>
         </figure>
 
         <figure class="gallery__item photo">
@@ -214,7 +169,6 @@
       <section class="video container">
         <h2 class="video__heading">Все еще сомневаетесь?</h2>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-
 
         <div class="video__controls controls">
 

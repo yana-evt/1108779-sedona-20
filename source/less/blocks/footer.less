@@ -2,6 +2,11 @@
 .footer {
   padding-top: 30px;
   background-color: @color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 22px;
 }
 
 .footer__hashtag {
@@ -32,7 +37,7 @@
   color: @color-white;
 }
 
-.footer-social__link  {
+.footer-social__link {
   display: flex;
   background-color: @color-main;
   width: 47px;
@@ -79,23 +84,11 @@
   }
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 22px;
-}
-
 .footer__wrapper-dev {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.footer__social-list {
-  margin-bottom: 40px;
 }
 
 .footer-copyright__text {
@@ -152,5 +145,4 @@
   .footer__hashtag {
     margin-left: 120px;
   }
-
 }

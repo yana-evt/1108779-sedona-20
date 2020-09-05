@@ -55,6 +55,7 @@
 .group-check__heading {
   font-size: @fs-heading-small;
   font-weight: bold;
+  margin-bottom: 32px;
 }
 
 .group-radio__heading {
@@ -72,10 +73,6 @@
 
 .group-check__name {
   margin-bottom: 53px;
-}
-
-.group-check__heading {
-  margin-bottom: 32px;
 }
 
 .group-input__textarea {
@@ -118,6 +115,13 @@
 
   .group-input__contacts {
     grid-area: contacts;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
   }
 
   .group-check {
@@ -127,6 +131,8 @@
 
   .group-input--text {
     grid-area: text;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
   }
 
   .form-wrapper {
@@ -221,16 +227,6 @@
     margin-bottom: 51px;
   }
 
-  .group-input__contacts {
-    padding-left: @padding-tablet;
-    padding-right: @padding-tablet;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-
   .group-input__heading--contacts {
     width: 100%;
     text-align: center;
@@ -311,11 +307,6 @@
       width: 123px;
       height: 1px;
     }
-  }
-
-  .group-input--text {
-    padding-left: @padding-tablet;
-    padding-right: @padding-tablet;
   }
 }
 

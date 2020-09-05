@@ -8,88 +8,44 @@
   </head>
   <body>
   <div class="body-wrapper">
-  <header class="header">
+    <header class="header header--nojs">
 
-    <nav class="header__main-nav main-nav main-nav--closed container">
+      <nav class="header__main-nav main-nav container">
 
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
+        <ul class="main-nav__list main-nav__list--left">
+          <li class="main-nav__item main-nav__item--active">
+            <a href="index.html" class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html" class="main-nav__link">Фото&nbspи&nbspвидео</a>
+          </li>
+        </ul>
 
-      <button class="header__main-nav-toggle" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
+        <ul class="main-nav__list main-nav__list--right">
+          <li class="main-nav__item">
+            <a class="main-nav__link">Форма&nbspотзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
+          </li>
+        </ul>
 
-    </nav>
+        <a href="index.html" class="header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
+            <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
+          </picture>
+        </a>
 
-    <nav class="header__main-nav main-nav main-nav--nojs container">
+        <button class="header__main-nav-toggle" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
 
-      <ul class="main-nav__list main-nav__list--left">
-        <li class="main-nav__item main-nav__item--active">
-          <a href="index.html" class="main-nav__link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="photo.html" class="main-nav__link">Фото&nbspи&nbspвидео</a>
-        </li>
-      </ul>
+      </nav>
 
-      <ul class="main-nav__list main-nav__list--right">
-        <li class="main-nav__item">
-          <a class="main-nav__link">Форма&nbspотзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
-        </li>
-      </ul>
+    </header>
 
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
-    </nav>
-
-    <nav class="header__main-nav main-nav main-nav--opened container">
-
-      <ul class="main-nav__list main-nav__list--left">
-        <li class="main-nav__item main-nav__item--active">
-          <a href="index.html" class="main-nav__link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="photo.html" class="main-nav__link">Фото&nbspи&nbspвидео</a>
-        </li>
-      </ul>
-
-      <ul class="main-nav__list main-nav__list--right">
-        <li class="main-nav__item">
-          <a class="main-nav__link">Форма&nbspотзыва</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML&nbspAcademy</a>
-        </li>
-      </ul>
-
-      <a href="index.html" class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-          <img src="./img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип сайта города Седона" class="logo">
-        </picture>
-      </a>
-
-      <button class="header__main-nav-toggle" type="button">
-        <span class="visually-hidden">Меню</span>
-      </button>
-
-    </nav>
-
-  </header>
     <main class="main main--form">
 
       <section class="main__intro main__intro--small">
@@ -101,7 +57,6 @@
 
         <h2 class="feedback__heading">Оставьте свой отзыв</h2>
         <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <span class="feedback__text--break">а также о посещенных вами достопримечательностях</span></p>
-
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form">
 

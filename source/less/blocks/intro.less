@@ -1,4 +1,4 @@
-
+// Последний комментарий был про псевдоэлементы на главной, не очень поняла, вроде, все так и сделано.. ширина у них 100%, фон выровнила по центру по оси х. Я куда-то не туда смотрю?
 .main__intro {
   position: relative;
   margin: 0 auto;
@@ -9,7 +9,6 @@
   background-position: center 0;
   height: 389px;
   width: 100%;
-  z-index: -1;
 
   &::after {
     content: "";
@@ -36,7 +35,6 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -230px;
-  z-index: -1;
 
   &::after {
     content: "";
@@ -56,7 +54,6 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .main__intro {
     position: relative;
     margin: 0 auto;
@@ -93,7 +90,6 @@
     height: 290px;
     position: relative;
     background-position: center -230px;
-    z-index: -1;
 
     &::after {
       content: "";
@@ -152,7 +148,7 @@
     height: 301px;
     position: relative;
     background-position: center -218px;
-    z-index: -1;
+
     &::after {
       content: "";
       display: block;
@@ -172,4 +168,3 @@
     margin-top: 101px;
   }
 }
-
