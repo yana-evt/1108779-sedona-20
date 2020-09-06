@@ -4,29 +4,29 @@
   text-transform: uppercase;
   border: none;
   font-weight: bold;
-  font-size: @fs-heading-small;
+  font-size: @fs-heading-medium;
   color: @color-white;
-  background-color: @color-bg-sky-blue;
+  background-color: @color-main;
 
   &:focus {
-    background-color: @color-bg-deep-sky-blue;
+    background-color: @color-bg-button-hover;
   }
 
   &:hover {
-    background-color: @color-bg-deep-sky-blue;
+    background-color: @color-bg-button-hover;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-    background-color: @color-bg-dark-sky-blue;
+    background-color: @color-bg-button-active;
   }
 
   &:disabled {
-    background-color: @color-light-grey;
+    background-color: @color-disabled-grey;
   }
 
   &:not([href]) {
     color: @color-white;
-    background-color: @color-bg-sky-blue;
+    background-color: @color-main;
   }
 }

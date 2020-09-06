@@ -1,47 +1,223 @@
 
 .header {
+  background-color: @color-white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-@media (max-width: @tablet-width) {
-  .header__main-nav {
-    order: -1;
+  .main-nav__list {
+    display: none;
+  }
+
+  .header__main-nav-toggle {
+    bottom: 14px;
+    display: block;
+    width: 23px;
+    margin-right: 20px;
+    margin-left: -43px;
+    height: 22px;
+    background-color: @color-transparent;
+    cursor: pointer;
+    border: none;
+    position: relative;
+  }
+
+  .header__main-nav-toggle::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: @color-main;
+    box-shadow:
+      0 9px 0 0 @color-main,
+      0 18px 0 0 @color-main;
+  }
+
+  .header__main-nav-toggle:hover::before {
+    background-color: fade(@color-main, 60%);
+    box-shadow:
+      0 9px 0 0 fade(@color-main, 60%),
+      0 18px 0 0 fade(@color-main, 60%);
+  }
+
+  .header__main-nav-toggle:focus::before {
+    background-color: fade(@color-main, 60%);
+    box-shadow:
+      0 9px 0 0 fade(@color-main, 60%),
+      0 18px 0 0 fade(@color-main, 60%);
+  }
+
+  .header__main-nav-toggle:active::before {
+    background-color: fade(@color-main, 30%);
+    box-shadow:
+      0 9px 0 0 fade(@color-main, 30%),
+      0 18px 0 0 fade(@color-main, 30%);
   }
 }
 
+.header--opened {
+  .main-nav__list {
+    display: grid;
+  }
+
+  .header__main-nav-toggle {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 17px;
+    right: 20px;
+    border: none;
+    background-color: @color-transparent;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .header__main-nav-toggle::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    background-image: url("../img/icon-cross.svg");
+    width: 22px;
+    height: 22px;
+  }
+
+  .header__main-nav-toggle:focus::before {
+    opacity: 0.6;
+  }
+
+  .header__main-nav-toggle:hover::before {
+    opacity: 0.6;
+  }
+
+  .header__main-nav-toggle:active::before {
+    opacity: 0.3;
+  }
+}
+
+.header--nojs {
+  .main-nav__list {
+    display: grid;
+  }
+
+  .header__main-nav-toggle {
+    display: none;
+  }
+}
 
 .header__logo {
-  height: 84px;
-  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .header {
+    .main-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
 
-    height: 84px;
+    .main-nav__list {
+      padding-top: 16px;
+      width: @tablet-width;
+      margin: 0 auto;
+    }
 
-    background-color: @color-white;
-    background-image: url("./img/logo-sedona-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: center -9px;
+    .main-nav__list--left {
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      order: -1;
+      padding-left: 40px;
+    }
+
+    .main-nav__list--left .main-nav__item {
+      margin-right: 75px;
+    }
+
+    .main-nav__list--left .main-nav__item:last-child {
+      margin-right: 0;
+    }
+
+    .main-nav__list--right {
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      order: 1;
+      padding-right: 20px;
+      margin-left: auto;
+    }
+
+    .main-nav__list--right .main-nav__item:last-child {
+      margin-left: 50px;
+    }
+
+    .main-nav__list--right .main-nav__item:first-child {
+      margin-left: 0;
+    }
+
+    .header__logo {
+      width: 102px;
+      height: 84px;
+      z-index: 1;
+      order: 0;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    height: 97px;
-    background-image: url("./img/logo-sedona-desktop.svg");
-    background-position: center 0;
-    background-size: cover;
-  }
-
-  @media (max-width: @tablet-width) {
-    order: 0;
+  .header--opened {
+    .header__main-nav-toggle {
+      display: none;
+    }
   }
 }
 
-.header__logo-toggle-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
+
+@media (min-width: @desktop-width) {
+  .header {
+    .main-nav__list--left {
+      padding-left: 83px;
+    }
+
+    .main-nav__list--left .main-nav__item {
+      margin-right: 160px;
+    }
+
+    .main-nav__list--left .main-nav__item:last-child {
+      margin-right: 0;
+    }
+
+    .main-nav__list--right {
+      padding-right: 61px;
+    }
+
+    .main-nav__list--right .main-nav__item {
+      margin-left: 0;
+    }
+
+    .main-nav__list--right .main-nav__item:last-child {
+      margin-left: 140px;
+    }
+
+    .header__logo {
+      width: 187px;
+      height: 97px;
+      z-index: 1;
+    }
+
+    .logo {
+      width: 187px;
+      height: 97px;
+    }
+  }
 }

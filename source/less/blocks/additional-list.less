@@ -1,8 +1,167 @@
 
 .additional-list {
   list-style: none;
+  padding: 0;
 }
 
 .additional-list__item {
   text-align: left;
+  position: relative;
+}
+
+.additional-list__heading {
+  margin: 0;
+  font-size: @fs-heading-small;
+  margin-bottom: 15px;
+}
+
+.additional-list__text {
+  margin: 0;
+  line-height: @lh-small;
+  margin-bottom: 27px;
+}
+
+.advantages__additional-group {
+  padding-left: 70px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-top: 36px;
+  margin: 0 auto;
+  width: @mobile-width;
+}
+
+.additional-list__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.additional-list__item--motel::before {
+  top: -10px;
+  left: -50px;
+  background-image: url("../img/icon-house.svg");
+  background-size: 39px 37px;
+  width: 39px;
+  height: 37px;
+}
+
+.additional-list__item--souvenirs::before {
+  top: -12px;
+  left: -45px;
+  background-image: url("../img/icon-gift.svg");
+  background-size: 32px 38px;
+  width: 32px;
+  height: 38px;
+}
+
+.additional-list__item--food::before {
+  top: -6px;
+  left: -50px;
+  background-image: url("../img/icon-burger.svg");
+  background-size: 40px 35px;
+  width: 40px;
+  height: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__additional-group {
+    padding-top: 160px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 5px;
+    width: 100%;
+  }
+
+  .additional-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .additional-list__heading {
+    font-size: @fs-heading-medium;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  .additional-list__text {
+    text-align: center;
+    margin: 0;
+  }
+
+  .additional-list__item {
+    width: 33.33%;
+
+    &--last {
+      order: 1;
+      padding-top: 10px;
+    }
+
+    &--motel {
+      margin-left: -7px;
+    }
+
+    &--food {
+      margin-left: 7px;
+    }
+  }
+
+  .additional-list__item--motel::before {
+    top: -100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-size: 75px 72px;
+    width: 75px;
+    height: 72px;
+  }
+
+  .additional-list__item--souvenirs::before {
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: 64px 75px;
+    width: 64px;
+    height: 75px;
+  }
+
+  .additional-list__item--food::before {
+    top: -100px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-size: 76px 68px;
+    width: 76px;
+    height: 68px;
+  }
+
+  .additional-list__text--food-break {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__additional-group {
+    padding-bottom: 80px;
+  }
+
+  .additional-list__heading {
+    font-size: @fs-heading-medium;
+  }
+
+  .additional-list__text--motel-break {
+    display: block;
+  }
+
+  .additional-list__text--souvenirs-break {
+    display: block;
+  }
+
+  .additional-list__item--last {
+    padding-top: 0;
+  }
 }

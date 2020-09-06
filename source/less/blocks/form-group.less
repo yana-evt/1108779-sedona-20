@@ -1,0 +1,451 @@
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.group-input__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+
+.group-input__name {
+  margin-right: 14px;
+}
+
+.group-input__name--contacts {
+  display: block;
+  text-align: left;
+  padding-left: 22px;
+  padding-bottom: 8px;
+  padding-top: 12px;
+}
+
+.group-input__input {
+  position: relative;
+}
+
+.group-input__wrapper--phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.group-input__wrapper--radio {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.group-radio__name {
+  margin-bottom: 43px;
+}
+
+.group-input__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+}
+
+.group-check__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.group-radio__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.group-input__wrapper--check {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.group-check__name {
+  margin-bottom: 53px;
+}
+
+.group-input__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 0;
+  margin-top: -17px;
+}
+
+.group-input__textarea::placeholder {
+  padding-left: 20px;
+  padding-top: 18px;
+  line-height: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "radio user"
+      "contacts contacts"
+      "check check"
+      "text text"
+      "button required";
+  }
+
+  .group-radio {
+    grid-area: radio;
+    text-align: left;
+    padding-left: 55px;
+  }
+
+  .group-input__user {
+    grid-area: user;
+    padding-right: 40px;
+    padding-left: 60px;
+  }
+
+  .group-input__contacts {
+    grid-area: contacts;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .group-check {
+    grid-area: check;
+    padding-bottom: 30px;
+  }
+
+  .group-input--text {
+    grid-area: text;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+  }
+
+  .form-wrapper {
+    grid-area: button;
+  }
+
+  .required {
+    grid-area: required;
+  }
+
+  .feedback__heading {
+    font-size: @fs-heading-big;
+    margin-bottom: 30px;
+  }
+
+  .group-input__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+  }
+
+  .group-radio__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+  }
+
+  .group-check__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 27px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 74px;
+      left: -185px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 74px;
+      right: -185px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
+  .group-check__heading--break {
+    display: block;
+  }
+
+  .group-input__heading--user {
+    text-align: left;
+    padding-bottom: 40px;
+    padding-left: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -60px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
+  }
+
+  .group-input__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+
+  .group-input__name {
+    margin-right: 14px;
+  }
+
+  .group-input__wrapper--radio {
+    margin-bottom: 51px;
+  }
+
+  .group-input__heading--contacts {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
+  .group-input__wrapper--phone {
+    margin-bottom: 25px;
+  }
+
+  .group-check__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    row-gap: 10px;
+
+    padding-left: 135px;
+    padding-right: 75px;
+  }
+
+  .group-input__wrapper--check {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .group-check__name {
+    padding-left: 70px;
+  }
+
+  .group-input__heading--text {
+    position: relative;
+    padding-bottom: 45px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-input__user {
+    padding-right: @padding-desktop;
+    padding-left: 80px;
+  }
+
+  .group-input__heading--user {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -80px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
+  }
+
+  .group-input__heading--contacts {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
+  .group-input__wrapper--phone {
+    width: 33%;
+    margin-right: 80px;
+  }
+
+  .group-input__wrapper--email {
+    width: 33%;
+  }
+
+  .wrapper--contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 49px;
+  }
+
+  .group-check__heading {
+    position: relative;
+    padding-top: 28px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 53px;
+      left: -341px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 53px;
+      right: -341px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
+  .group-check__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
+  }
+
+  .group-input__heading--text {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
+  .group-input--text {
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
+  }
+
+  .footer {
+    padding-top: 20px;
+  }
+}

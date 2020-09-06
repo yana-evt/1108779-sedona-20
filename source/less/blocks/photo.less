@@ -1,4 +1,15 @@
 
+.main--photo {
+  background-color: @color-white;
+}
+
+.gallery {
+  padding-left: @padding-mobile;
+  padding-right: @padding-mobile;
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
 .photo-video__heading {
   font-size: @fs-heading-small;
 }
@@ -10,12 +21,141 @@
 
 .photo__creator {
   text-transform: none;
+  margin: 0;
 }
 
 .photo__likes {
   font-weight: bold;
+  padding-left: 37px;
+  padding-top: 11px;
+  display: block;
 }
 
 .gallery__item {
   text-align: left;
+}
+
+.wrapper__gallery {
+  padding-bottom: 37.5px;
+}
+
+.photo__icon-like {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  color: @color-black;
+  opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "z z"
+      "y x"
+      "w .";
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+  }
+
+  .gallery__item:first-child {
+    grid-area: z;
+  }
+
+  .photo__image--sunset {
+    width: 100%;
+  }
+
+  .photo__image--cactus {
+    width: 100%;
+  }
+
+  .photo__image--roads {
+    width: 100%;
+  }
+
+  .photo__image--bridge {
+    width: 100%;
+  }
+
+  .photo__link {
+    position: relative;
+  }
+
+  .photo__link::after {
+    content: "";
+    background-color: @color-bg-form-grey;
+    width: 100%;
+    min-height: 80px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    z-index: -1;
+  }
+
+  .photo__creator {
+    margin-right: auto;
+    padding-left: 20px;
+  }
+
+  .photo__name {
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+
+  .photo__likes {
+    padding-right: 20px;
+    margin-top: -10px;
+  }
+
+  .photo__icon-like {
+    display: block;
+    width: 23px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    right: 10%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "z z z"
+      "y x w";
+  }
+
+  .gallery__item {
+    position: relative;
+    height: 100%;
+  }
+
+  .photo__name {
+    color: @color-white;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 3;
+  }
+
+  .gallery__item:first-child .photo__name {
+    top: 300px;
+  }
+
+  .photo__creator {
+    color: @color-white;
+    position: absolute;
+    top: 230px;
+    left: 0;
+  }
+
+  .gallery__item:first-child .photo__creator {
+    top: 350px;
+  }
 }

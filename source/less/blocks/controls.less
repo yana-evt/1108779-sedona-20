@@ -1,0 +1,132 @@
+
+.controls {
+  position: relative;
+}
+
+.controls__background--dark {
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: @color-black;
+  opacity: 0.6;
+}
+
+.controls__background--light {
+  position: absolute;
+  top: 201px;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  background-color: @color-bg-form-grey;
+}
+
+.controls__timeline {
+  position: absolute;
+  top: 178px;
+  left: 22px;
+  width: 235px;
+  height: 3px;
+  background-color: @color-white;
+  opacity: 0.2;
+}
+
+.controls__toggle {
+  position: absolute;
+  top: 175px;
+  left: 58px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: @color-white;
+}
+
+.controls__repeat {
+  position: absolute;
+  top: 223px;
+  left: 25px;
+  width: 16px;
+  height: 20px;
+  color: @color-controls-mobile;
+}
+
+.controls__subtitles {
+  position: absolute;
+  top: 224px;
+  right: 74px;
+  width: 32px;
+  height: 20px;
+  color: @color-controls-mobile;
+}
+
+.controls__fullscreen {
+  position: absolute;
+  top: 224px;
+  right: 23px;
+  width: 20px;
+  height: 20px;
+  color: @color-controls-mobile;
+}
+
+@media (min-width: @tablet-width) {
+  .controls {
+    position: relative;
+  }
+
+  .controls__background--dark {
+    position: absolute;
+    display: block;
+    top: 406px;
+    left: 0;
+    width: 100%;
+    height: 93px;
+    background-color: @color-black;
+    opacity: 0.6;
+  }
+
+  .controls__background--light {
+    display: none;
+  }
+
+  .controls__timeline {
+    position: absolute;
+    top: 451px;
+    left: 92px;
+    width: 389px;
+    height: 3px;
+  }
+
+  .controls__toggle {
+    position: absolute;
+    top: 448px;
+    left: 205px;
+  }
+
+  .controls__repeat {
+    position: absolute;
+    top: 442px;
+    left: 35px;
+    color: @color-white;
+  }
+
+  .controls__subtitles {
+    position: absolute;
+    top: 442px;
+    right: 92px;
+    color: @color-white;
+  }
+
+  .controls__fullscreen {
+    position: absolute;
+    top: 442px;
+    right: 41px;
+    color: @color-white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls__timeline {
+    width: 540px;
+  }
+}

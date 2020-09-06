@@ -2,3 +2,31 @@
 .video__heading {
   font-size: @fs-heading-small;
 }
+
+.video__screenshot {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .video__image {
+    width: 100%;
+  }
+
+  .video__screenshot {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+}

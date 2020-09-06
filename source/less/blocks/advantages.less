@@ -1,27 +1,272 @@
 
+.advantages {
+  background-color: @color-white;
+}
+
 .advantages__heading {
+  margin: 0;
   font-size: @fs-heading-small;
+  padding-top: 34px;
+  padding-bottom: 29px;
+}
+
+.advantages__heading-break {
+  display: block;
+}
+
+.advantages__text {
+  margin: 0;
+  padding-bottom: 34px;
 }
 
 .advantages__name {
   font-size: @fs-heading-small;
+  margin: 0;
+  padding-top: 49px;
+  padding-bottom: 9px;
+}
+
+.advantages__description {
+  line-height: @lh-small;
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 37px;
 }
 
 .advantages__list {
   list-style: none;
+  padding: 0;
 }
 
 .advantages__item {
   color: @color-white;
-  background-color: @color-bg-sky-blue;
+  background-color: @color-main;
 }
 
 .advantages__item--secondary {
   color: @color-black;
-  background-color: @color-ordinary-grey;
+  background-color: @color-bg-advantages-grey;
 }
 
 .advantages__number::before {
   counter-increment: hyphen;
-  content: "\2013 \2004 №" counter(hyphen) "\2004 \2013";
+  content: "\2014 \2004 №" counter(hyphen) "\2004 \2014";
+}
+
+.advantages__wrapper--second .advantages__name {
+  padding-top: 40px;
+}
+
+.advantages__wrapper--image-first {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.advantages__wrapper--image-second {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.advantages__wrapper--first {
+  position: relative;
+}
+
+.advantages__wrapper--first::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -22px;
+  width: @mobile-width;
+  height: 37px;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "one one one"
+      "add add add"
+      "two two two"
+      "three four five";
+  }
+
+  .advantages__item--first {
+    grid-area: one;
+  }
+
+  .advantages__additional-group {
+    grid-area: add;
+  }
+
+  .advantages__item--second {
+    grid-area: two;
+  }
+
+  .advantages__item--third {
+    grid-area: three;
+  }
+
+  .advantages__item--fourth {
+    grid-area: four;
+  }
+
+  .advantages__item--fifth {
+    grid-area: five;
+  }
+
+  .advantages__wrapper--first::before {
+    display: none;
+  }
+
+  .advantages__heading {
+    font-size: @fs-heading-medium;
+    padding-top: 45px;
+  }
+
+  .advantages__name {
+    font-size: @fs-heading-medium;
+    padding-top: 42px;
+    padding-bottom: 9px;
+  }
+
+  .advantages__text {
+    padding-bottom: 53px;
+  }
+
+  .advantages__item {
+    width: 100%;
+    min-height: 256px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .advantages__name-break {
+    display: block;
+  }
+
+  .advantages__description {
+    line-height: @lh-small;
+    padding-top: 20px;
+    padding-bottom: 44px;
+    margin-right: 31px;
+    margin-left: 31px;
+  }
+
+  .advantages__wrapper--image-first {
+    width: 66.67%;
+    background-image: url("../img/main-city-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--image-second {
+    width: 66.67%;
+    background-image: url("../img/main-bridge-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--first {
+    width: 33.33%;
+  }
+
+  .advantages__wrapper--second {
+    width: 33.33%;
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__heading {
+    font-size: @fs-heading-medium;
+    padding-top: 57px;
+  }
+
+  .advantages__text {
+    padding-bottom: 42px;
+  }
+
+  .advantages__name {
+    font-size: @fs-heading-medium;
+    padding-top: 49px;
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    min-height: 256px;
+    overflow: hidden;
+  }
+
+  .advantages__name-break {
+    display: block;
+  }
+
+  .advantages__description {
+    line-height: @lh-small;
+    padding-top: 20px;
+    padding-bottom: 58px;
+    margin-right: 59px;
+    margin-left: 57px;
+  }
+
+  .advantages__wrapper--first {
+    width: 33.33%;
+  }
+
+  .advantages__wrapper--image-first {
+    width: 66.67%;
+    background-image: url("../img/main-city-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--image-second {
+    width: 66.67%;
+    background-image: url("../img/main-bridge-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .advantages__wrapper--second {
+    width: 33.33%;
+    order: 1;
+  }
+
+  .advantages__wrapper--second .advantages__description {
+    line-height: @lh-small;
+    padding-top: 20px;
+    padding-bottom: 53px;
+    margin-right: 85px;
+    margin-left: 85px;
+  }
+
+  .advantages__wrapper--second .advantages__name {
+    padding-top: 54px;
+  }
 }
