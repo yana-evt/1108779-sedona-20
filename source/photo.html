@@ -53,16 +53,16 @@
         <img class="main__intro-visual main__intro-visual--small" src="./img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </section>
 
-      <h2 class="photo-video__heading container">Фото и видео</h2>
-      <p class="photo-video__text container">Не можете решить на путешествие из&#8209;за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <h2 class="photo-video__heading">Фото и видео</h2>
+      <p class="photo-video__text container">Не можете решиться на путешествие из&#8209;за курса? <span class="photo-video__text-break">Фотографии помогут вам забыть о политике и экономике.</span></p>
 
       <section class="gallery">
         <figure class="gallery__item photo">
           <a href="" class="photo__link photo__link--sunset">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/photo-sunset-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="./img/photo-sunset-tablet@1x.jpg">
-              <img src="./img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Шоссе на закате" class="photo__image photo__image--sunset">
+              <source media="(min-width: 1200px)" srcset="./img/photo-sunset-desktop@1x.jpg 1x, ./img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-sunset-tablet@1x.jpg 1x, ./img/photo-sunset-tablet@2x.jpg 2x">
+              <img src="./img/photo-sunset-mobile@1x.jpg" srcset="./img/photo-sunset-mobile@1x.jpg 1x, ./img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Шоссе на закате" class="photo__image photo__image--sunset">
             </picture>
           </a>
           <div class="photo__background"></div>
@@ -87,96 +87,96 @@
         <figure class="gallery__item photo">
           <a href="" class="photo__link photo__link--cactus">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/photo-cactus-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="./img/photo-cactus-tablet@1x.jpg">
-              <img src="./img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Кактусы на фоне красных скал" class="photo__image photo__image--cactus">
+              <source media="(min-width: 1200px)" srcset="./img/photo-cactus-desktop@1x.jpg 1x, ./img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-cactus-tablet@1x.jpg 1x, ./img/photo-cactus-tablet@2x.jpg 2x">
+              <img src="./img/photo-cactus-mobile@1x.jpg" srcset="./img/photo-cactus-mobile@1x.jpg 1x, ./img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Кактусы на фоне красных скал" class="photo__image photo__image--cactus">
             </picture>
           </a>
           <div class="photo__background"></div>
           <figcaption class="photo__name">Местная растительность</figcaption>
-          <div class="wrapper__gallery">
             <p class="photo__creator">Автор фото: Сергей</p>
-            <div class="photo__icon-like">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
-                <g id="Page-1">
-                  <g id="Core" transform="translate(-295.000000, -464.000000)">
-                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
-                      <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+            <div class="wrapper__gallery--like">
+              <div class="photo__icon-like">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                  <g id="Page-1">
+                    <g id="Core" transform="translate(-295.000000, -464.000000)">
+                      <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                        <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                      </g>
                     </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
+              </div>
+              <span class="photo__likes">143</span>
             </div>
-            <span class="photo__likes">143</span>
-          </div>
         </figure>
 
         <figure class="gallery__item photo">
           <a href="" class="photo__link photo__link--roads">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/photo-roads-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="./img/photo-roads-tablet@1x.jpg">
-              <img src="./img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Серпантин в горном лесу" class="photo__image photo__image--roads">
+              <source media="(min-width: 1200px)" srcset="./img/photo-roads-desktop@1x.jpg 1x, ./img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-roads-tablet@1x.jpg 1x, ./img/photo-roads-tablet@2x.jpg 2x">
+              <img src="./img/photo-roads-mobile@1x.jpg" srcset="./img/photo-roads-mobile@1x.jpg 1x, ./img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Серпантин в горном лесу" class="photo__image photo__image--roads">
             </picture>
           </a>
           <div class="photo__background"></div>
           <figcaption class="photo__name">Дорога на север</figcaption>
-          <div class="wrapper__gallery">
             <p class="photo__creator">Автор фото: Петр</p>
-            <div class="photo__icon-like">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
-                <g id="Page-1">
-                  <g id="Core" transform="translate(-295.000000, -464.000000)">
-                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
-                      <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+            <div class="wrapper__gallery--like">
+              <div class="photo__icon-like">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                  <g id="Page-1">
+                    <g id="Core" transform="translate(-295.000000, -464.000000)">
+                      <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                        <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                      </g>
                     </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
+              </div>
+              <span class="photo__likes">96</span>
             </div>
-            <span class="photo__likes">96</span>
-          </div>
         </figure>
 
         <figure class="gallery__item photo">
           <a href="" class="photo__link photo__link--bridge">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/photo-bridge-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="./img/photo-bridge-tablet@1x.jpg">
-              <img src="./img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Каменный мост дьявола" class="photo__image photo__image--bridge">
+              <source media="(min-width: 1200px)" srcset="./img/photo-bridge-desktop@1x.jpg 1x, ./img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-bridge-tablet@1x.jpg 1x, ./img/photo-bridge-tablet@2x.jpg 2x">
+              <img src="./img/photo-bridge-mobile@1x.jpg" srcset="./img/photo-bridge-mobile@1x.jpg 1x, ./img/photo-bridge-mobile@2x.jpg 2x," width="280" height="280" alt="Каменный мост дьявола" class="photo__image photo__image--bridge">
             </picture>
           </a>
           <div class="photo__background"></div>
           <figcaption class="photo__name">Мост Дьявола</figcaption>
-          <div class="wrapper__gallery">
             <p class="photo__creator">Автор фото: Антон</p>
-            <div class="photo__icon-like">
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
-                <g id="Page-1">
-                  <g id="Core" transform="translate(-295.000000, -464.000000)">
-                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
-                      <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+            <div class="wrapper__gallery--like">
+              <div class="photo__icon-like">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                  <g id="Page-1">
+                    <g id="Core" transform="translate(-295.000000, -464.000000)">
+                      <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                        <path id="Shape" fill="currentColor" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                      </g>
                     </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
+              </div>
+              <span class="photo__likes">254</span>
             </div>
-            <span class="photo__likes">254</span>
-          </div>
         </figure>
       </section>
 
       <section class="video container">
         <h2 class="video__heading">Все еще сомневаетесь?</h2>
-        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <p class="video__text">Смотрите видеопрезентацию и скорее&nbspза билетами, пока они <span class="video__text-break">не подорожали в очередной раз!</span></p>
 
         <div class="video__controls controls">
 
           <div class="video__screenshot">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/video-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="./img/video-tablet@1x.jpg">
-              <img src="./img/video-mobile@1x.jpg" width="320" height="201" alt="Видеопрезентация" class="video__image">
+              <source media="(min-width: 1200px)" srcset="./img/video-desktop@1x.jpg 1x, ./img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/video-tablet@1x.jpg 1x, ./img/video-tablet@2x.jpg 2x">
+              <img src="./img/video-mobile@1x.jpg" srcset="./img/video-mobile@1x.jpg 1x, ./img/video-mobile@2x.jpg 2x" width="320" height="201" alt="Видеопрезентация" class="video__image">
             </picture>
           </div>
 

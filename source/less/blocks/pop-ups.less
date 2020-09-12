@@ -6,3 +6,146 @@
 .pop-up__button-wrapper {
   background-color: @color-bg-form-grey;
 }
+
+.pop-up {
+  display: block;
+  max-width: @mobile-width;
+}
+
+.failure {
+  //display: none;
+  display: block;
+  position: absolute;
+  top: 1543px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: @color-white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  min-height: 280px;
+  z-index: 3;
+
+  .pop-up__heading {
+    padding-top: 25px;
+  }
+
+  .pop-up__message {
+    line-height: @lh-medium;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+}
+
+.failure__close {
+  display: block;
+  width: 56.25%;
+  min-height: 58px;
+  margin: 0 auto;
+  font-size: @fs-heading-small;
+  line-height: @lh-main;
+}
+
+.success {
+  //display: none;
+  background-color: @color-white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  min-height: 323px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 1870px;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .pop-up__message {
+    line-height: @lh-medium;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 13px;
+  }
+}
+
+.pop-up__button-wrapper {
+  width: 100%;
+  min-height: 98px;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.success__close {
+  font-size: @fs-heading-small;
+  line-height: @lh-main;
+  display: block;
+  min-width: 280px;
+  min-height: 58px;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .failure {
+    min-width: 400px;
+    min-height: 347px;
+    top: 1430px;
+
+    .pop-up__heading {
+      font-size: @fs-heading-big;
+      line-height: @lh-additional;
+    }
+
+    .pop-up__message {
+      padding-top: 0;
+      padding-bottom: 23px;
+    }
+  }
+  .pop-up__heading--break {
+    display: block;
+  }
+
+  .failure__close {
+    width: 68%;
+    font-size: @fs-heading-medium;
+  }
+
+  .success {
+    min-width: 640px;
+    min-height: 347px;
+    top: 1269px;
+
+    .pop-up__heading {
+      font-size: @fs-heading-big;
+      line-height: @lh-main;
+      margin: 0;
+      padding-bottom: 16px;
+    }
+
+    .pop-up__message {
+      padding-bottom: 18px;
+    }
+  }
+
+  .pop-up__button-wrapper {
+    min-height: 146px;
+    padding-top: 44px;
+  }
+
+  .success__close {
+    min-width: 458px;
+    font-size: @fs-heading-medium;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .failure {
+    top: 1390px;
+  }
+
+  .success {
+    top: 1120px;
+  }
+}

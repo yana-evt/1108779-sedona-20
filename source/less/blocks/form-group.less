@@ -55,7 +55,7 @@
 .group-check__heading {
   font-size: @fs-heading-small;
   font-weight: bold;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 .group-radio__heading {
@@ -72,7 +72,11 @@
 }
 
 .group-check__name {
-  margin-bottom: 53px;
+  margin-bottom: 54px;
+}
+
+.group-input--text {
+  margin-top: 8px;
 }
 
 .group-input__textarea {
@@ -86,6 +90,10 @@
   padding-left: 20px;
   padding-top: 18px;
   line-height: 25px;
+}
+
+.group-check {
+  margin-top: 14px;
 }
 
 @media (min-width: @tablet-width) {
@@ -126,7 +134,7 @@
 
   .group-check {
     grid-area: check;
-    padding-bottom: 30px;
+    padding-bottom: 18px;
   }
 
   .group-input--text {
@@ -162,14 +170,13 @@
     font-size: @fs-heading-medium;
     font-weight: bold;
     position: relative;
-    padding-top: 50px;
     padding-bottom: 27px;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      top: 74px;
+      top: 26px;
       left: -185px;
       background-color: @color-dark-grey-border;
       width: 123px;
@@ -180,7 +187,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: 74px;
+      top: 26px;
       right: -185px;
       background-color: @color-dark-grey-border;
       width: 123px;
@@ -380,13 +387,12 @@
 
   .group-check__heading {
     position: relative;
-    padding-top: 28px;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      top: 53px;
+      top: 25px;
       left: -341px;
       background-color: @color-dark-grey-border;
       width: 280px;
@@ -397,7 +403,7 @@
       content: "";
       display: block;
       position: absolute;
-      top: 53px;
+      top: 25px;
       right: -341px;
       background-color: @color-dark-grey-border;
       width: 280px;
@@ -445,7 +451,7 @@
     padding-right: @padding-desktop;
   }
 
-  .footer {
-    padding-top: 20px;
+  .group-check {
+    margin-top: 0;
   }
 }
