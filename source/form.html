@@ -56,7 +56,7 @@
       <section class="main__feedback feedback container">
 
         <h2 class="feedback__heading">Оставьте свой отзыв</h2>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <span class="feedback__text--break">а также о посещенных вами достопримечательностях</span></p>
+        <p class="feedback__text feedback-description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <span class="feedback-description__break">а также о посещенных вами достопримечательностях</span></p>
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form">
 
@@ -83,19 +83,19 @@
 
               <legend class="group-input__heading group-input__heading--contacts">Контактная информация:</legend>
 
-              <div class="wrapper--contacts">
-                <label for="phone" class="group-input__name group-input__name--contacts">
-                  <span class="group-input__name--main">Контактный телефон*:</span>
-                  <span class="group-input__name--additional">Tелефон*:</span>
+              <div class="group-input__wrapper group-input__wrapper--contacts">
+                <label for="phone" class="group-input__name group-input__name--contacts label-contacts">
+                  <span class="label-contacts__main">Контактный телефон*:</span>
+                  <span class="label-contacts__additional">Tелефон*:</span>
                 </label>
 
-                <div class="group-input__wrapper--phone">
+                <div class="group-input__wrapper group-input__wrapper--phone">
                   <input id="phone" type="tel" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Введите телефон" minlength="12" maxlength="12" class="group-input__input group-input__input--phone" required>
                 </div>
 
                 <label for="email" class="group-input__name group-input__name--contacts">Электронная почта*:</label>
 
-                <div class="group-input__wrapper--email">
+                <div class="group-input__wrapper group-input__wrapper--email">
                   <input id="email" type="email" name="email" placeholder="Введите e-mail" class="group-input__input group-input__input--email" required>
                 </div>
               </div>
@@ -105,21 +105,21 @@
 
               <legend class="group-radio__heading">Ваше общее впечатление:</legend>
 
-              <div class="group-input__wrapper--radio">
+              <div class="group-radio__wrapper">
 
                 <input id="positive" type="radio" name="impression" value="positive" class="group-radio__input visually-hidden" checked>
                 <label for="positive" class="group-radio__name">Скорее положительное</label>
 
               </div>
 
-              <div class="group-input__wrapper--radio">
+              <div class="group-radio__wrapper">
 
                 <input id="negative" type="radio" name="impression" value="negative" class="group-radio__input visually-hidden" checked disabled>
                 <label for="negative" class="group-radio__name">Скорее отрицательное</label>
 
               </div>
 
-              <div class="group-input__wrapper--radio">
+              <div class="group-radio__wrapper">
 
                 <input id="neutral" type="radio" name="impression" value="neutral" class="group-radio__input visually-hidden">
                 <label for="neutral" class="group-radio__name">Затрудняюсь ответить</label>
@@ -130,24 +130,24 @@
 
             <fieldset class="form__group group-check">
 
-              <legend class="group-check__heading">Посещенные <span class="group-check__heading--break">достопримечательности:</span></legend>
-              <div class="group-check__wrapper">
-              <div class="group-input__wrapper--check">
+              <legend class="group-check__heading checkbox-heading">Посещенные <span class="checkbox-heading__break">достопримечательности:</span></legend>
+              <div class="group-check__wrapper checkbox-wrapper">
+              <div class="checkbox-wrapper__item">
                 <input id="devils-bridge" type="checkbox" name="devils-bridge" class="group-check__input visually-hidden" checked>
                 <label for="devils-bridge" class="group-check__name">Мост Дьявола</label>
               </div>
 
-              <div class="group-input__wrapper--check">
+              <div class="checkbox-wrapper__item">
                 <input id="mountain-bell" type="checkbox" name="mountain-bell" class="group-check__input visually-hidden" disabled>
                 <label for="mountain-bell" class="group-check__name">Гора-Колокол</label>
               </div>
 
-              <div class="group-input__wrapper--check">
+              <div class="checkbox-wrapper__item">
                 <input id="slide-park" type="checkbox" name="slide-park" class="group-check__input visually-hidden" checked disabled>
                 <label for="slide-park" class="group-check__name">Слайд-парк</label>
               </div>
 
-              <div class="group-input__wrapper--check">
+              <div class="checkbox-wrapper__item">
                 <input id="red-rocks" type="checkbox" name="red-rocks" class="group-check__input visually-hidden">
                 <label for="red-rocks" class="group-check__name">Красные скалы</label>
               </div>
@@ -157,10 +157,8 @@
 
             <fieldset class="form__group group-input group-input--text">
 
-              <legend class="group-input__heading group-input__heading--text">Опишите свои эмоции:</legend>
-
-              <label for="emotions-letter" class="group-input__name" aria-label="Текст письма:"></label>
-                <textarea id="emotions-letter" type="text" name="emotions" placeholder="Опишите подробно все свои восторги" class="group-input__textarea"></textarea>
+              <label for="emotions-letter" class="group-input__heading group-input__heading--text" aria-label="Текст письма:">Опишите свои эмоции:</label>
+                <textarea id="emotions-letter" name="emotions" placeholder="Опишите подробно все свои восторги" class="group-input__textarea"></textarea>
 
             </fieldset>
             <div class="form-wrapper">
@@ -177,9 +175,9 @@
       <p class="footer__hashtag">#VISITSEDONA</p>
 
       <ul class="footer__social-list">
-        <li class="footer__social-item">
+        <li class="footer__social-item social-item">
           <span class="visually-hidden">Twitter</span>
-          <a href="" class="footer-social__link">
+          <a href="" class="social-item__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
               <g id="W6EeEF_1_">
                 <g>
@@ -189,17 +187,17 @@
             </svg>
           </a>
         </li>
-        <li class="footer__social-item">
+        <li class="footer__social-item social-item">
           <span class="visually-hidden">Facebook</span>
-          <a href="" class="footer-social__link">
+          <a href="" class="social-item__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
               <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
             </svg>
           </a>
         </li>
-        <li class="footer__social-item">
+        <li class="footer__social-item social-item">
           <span class="visually-hidden">Youtube</span>
-          <a href="" class="footer-social__link">
+          <a href="" class="social-item__link">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
               <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
             </svg>
@@ -217,7 +215,7 @@
     </footer>
 
     <div class="failure pop-up">
-      <h2 class="pop-up__heading">Что-то пошло <span class="pop-up__heading--break">не так!</span></h2>
+      <h2 class="pop-up__heading failure-heading">Что-то пошло <span class="failure-heading__break">не так!</span></h2>
       <p class="pop-up__message">Проверьте поля, выделенные красным, скорее всего вы забыли&nbspих заполнить</p>
       <button type="button" class="button failure__close">Ок</button>
     </div>

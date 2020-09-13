@@ -40,6 +40,8 @@
   height: 9px;
   border-radius: 50%;
   background-color: @color-white;
+  border: none;
+  padding: 0;
 }
 
 .controls__repeat {
@@ -68,6 +70,26 @@
   height: 20px;
   color: @color-controls-mobile;
 }
+
+.controls-states {
+  border: none;
+  padding: 0;
+
+  &:focus {
+    color: @color-dark-radiobutton;
+  }
+
+  &:hover {
+    color: @color-dark-radiobutton;
+  }
+
+  &:active {
+    color: @color-dark-radiobutton;
+    opacity: 0.3;
+  }
+}
+
+
 
 @media (min-width: @tablet-width) {
   .controls {
@@ -122,6 +144,26 @@
     top: 442px;
     right: 41px;
     color: @color-white;
+  }
+
+  .controls-states {
+    border: none;
+    padding: 0;
+
+    &:focus {
+      color: @color-white;
+      opacity: 0.6;
+    }
+
+    &:hover {
+      color: @color-white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      color: @color-white;
+      opacity: 0.3;
+    }
   }
 }
 
