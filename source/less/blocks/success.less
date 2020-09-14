@@ -1,19 +1,14 @@
 
 .success {
-  //display: none;
+  display: none;
   background-color: @color-white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   min-height: 323px;
   z-index: 3;
-  display: flex;
+  //display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  //position: absolute;
-  //top: 1870px;
-  //left: 0;
-  //right: 0;
-  //margin: auto;
 
   .pop-up__message {
     line-height: @lh-medium;
@@ -36,7 +31,6 @@
   .success {
     min-width: 640px;
     min-height: 347px;
-    //top: 1269px;
 
     .pop-up__heading {
       font-size: @fs-heading-big;
@@ -53,11 +47,5 @@
   .success__close {
     min-width: 458px;
     font-size: @fs-heading-medium;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .success {
-    //top: 1120px;
   }
 }

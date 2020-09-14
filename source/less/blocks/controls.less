@@ -42,6 +42,7 @@
   background-color: @color-white;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .controls__repeat {
@@ -74,6 +75,8 @@
 .controls-states {
   border: none;
   padding: 0;
+  background-color: @color-transparent;
+  cursor: pointer;
 
   &:focus {
     color: @color-dark-radiobutton;
@@ -88,8 +91,6 @@
     opacity: 0.3;
   }
 }
-
-
 
 @media (min-width: @tablet-width) {
   .controls {
@@ -147,9 +148,6 @@
   }
 
   .controls-states {
-    border: none;
-    padding: 0;
-
     &:focus {
       color: @color-white;
       opacity: 0.6;
