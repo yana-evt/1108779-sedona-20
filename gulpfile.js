@@ -60,7 +60,7 @@ const copy = () => {
     "source/fonts/**/*.{woff, woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
     ], {
     base: "source"
     })
@@ -68,6 +68,19 @@ const copy = () => {
 }
 
 exports.copy = copy;
+
+// HTML
+
+const html = () => {
+  return gulp.src([
+    "source/*.html",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
 
 // Del
 
@@ -77,12 +90,23 @@ const clean = () => {
 
 exports.clean = clean;
 
+// Build
+
+const build = gulp.series(
+    clean,
+    copy,
+    styles,
+    html,
+  );
+
+exports.build = build;
+
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -97,9 +121,9 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
