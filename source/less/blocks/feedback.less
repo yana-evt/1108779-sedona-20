@@ -15,23 +15,28 @@
 
 .feedback__text {
   line-height: @lh-medium;
-  padding-bottom: 17px;
+  padding-bottom: 3px;
 }
 
 .feedback__button-send {
   margin: 0 auto;
   display: block;
-  font-size: @fs-heading-small;
+  font-size: @fs-heading-medium;
+  line-height: @lh-main;
   text-transform: uppercase;
   padding-top: 22px;
   padding-bottom: 14px;
   border: none;
-  margin-bottom: 78px;
   width: 100%;
 }
 
+.form-wrapper {
+  padding-top: 44px;
+  padding-bottom: 35px;
+}
+
 .required {
-  appearance: none;
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -45,22 +50,27 @@
     padding-bottom: 88px;
   }
 
-  .feedback__text--break {
+  .feedback-description__break {
     display: block;
   }
 
   .feedback__button-send {
-    padding-top: 22px;
-    padding-bottom: 16px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
     width: 100%;
     margin-left: 0;
   }
 
   .form-wrapper {
     padding-left: @padding-tablet;
+    padding-top: 48px;
+    padding-bottom: 62px;
   }
 
   .required {
+    display: block;
+    padding-top: 54px;
     padding-right: @padding-tablet;
     text-align: right;
     width: 100%;
@@ -76,24 +86,13 @@
     padding-bottom: 60px;
   }
 
-  .feedback__text--break {
-    display: block;
-  }
-
-  .feedback__button-send {
-    padding-top: 22px;
-    padding-bottom: 16px;
-    width: 100%;
-    margin-left: 0;
-  }
-
   .form-wrapper {
     padding-left: @padding-desktop;
+    padding-bottom: 67px;
+    padding-top: 49px;
   }
 
   .required {
     padding-right: @padding-desktop;
-    text-align: right;
-    width: 100%;
   }
 }
