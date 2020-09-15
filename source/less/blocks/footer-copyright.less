@@ -1,0 +1,31 @@
+
+.footer-copyright__link {
+  width: 27px;
+  height: 34px;
+  line-height: 0;
+  font-size: 0;
+  color: @color-black;
+
+  &:focus {
+    color: @color-main;
+  }
+
+  &:hover {
+    color: @color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer-copyright__text {
+  margin: 0;
+  margin-right: 11px;
+}
+
+@media (min-width: @tablet-width) {
+  .footer-copyright__text {
+    margin-left: 7px;
+  }
+}

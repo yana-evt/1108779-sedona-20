@@ -1,0 +1,60 @@
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form__group {
+  border: none;
+}
+
+.form__button-wrapper {
+  padding-top: 44px;
+  padding-bottom: 35px;
+}
+
+.form__required {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "radio user"
+      "contacts contacts"
+      "check check"
+      "text text"
+      "button required";
+  }
+
+  .form__button-wrapper {
+    grid-area: button;
+    padding-left: @padding-tablet;
+    padding-top: 48px;
+    padding-bottom: 62px;
+  }
+
+  .form__required {
+    grid-area: required;
+    display: block;
+    padding-top: 54px;
+    padding-right: @padding-tablet;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__button-wrapper {
+    padding-left: @padding-desktop;
+    padding-bottom: 67px;
+    padding-top: 49px;
+  }
+
+  .form__required {
+    padding-right: @padding-desktop;
+  }
+}

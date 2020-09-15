@@ -1,22 +1,23 @@
 
 .failure {
-  display: none;
+  display: block;
   background-color: @color-white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   min-height: 280px;
-  z-index: 3;
+  z-index: -10;
+}
 
-  .pop-up__heading {
-    padding-top: 25px;
-  }
+.failure__heading {
+  font-size: @fs-heading-small;
+  padding-top: 25px;
+}
 
-  .pop-up__message {
-    line-height: @lh-medium;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
+.failure__message {
+  line-height: @lh-medium;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .failure__close {
@@ -32,16 +33,16 @@
   .failure {
     min-width: 400px;
     min-height: 347px;
+  }
 
-    .pop-up__heading {
-      font-size: @fs-heading-big;
-      line-height: @lh-additional;
-    }
+  .failure__heading {
+    font-size: @fs-heading-big;
+    line-height: @lh-additional;
+  }
 
-    .pop-up__message {
-      padding-top: 0;
-      padding-bottom: 23px;
-    }
+  .failure__message {
+    padding-top: 0;
+    padding-bottom: 23px;
   }
 
   .failure-heading__break {

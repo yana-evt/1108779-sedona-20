@@ -130,24 +130,24 @@
 
               <legend class="group-check__heading checkbox-heading">Посещенные <span class="checkbox-heading__break">достопримечательности:</span></legend>
               <div class="group-check__wrapper checkbox-wrapper">
-              <div class="checkbox-wrapper__item">
-                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="group-check__input visually-hidden" checked>
-                <label for="devils-bridge" class="group-check__name">Мост Дьявола</label>
+              <div class="checkbox-wrapper__item checkbox">
+                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="checkbox__input visually-hidden" checked>
+                <label for="devils-bridge" class="checkbox__name">Мост Дьявола</label>
               </div>
 
-              <div class="checkbox-wrapper__item">
-                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="group-check__input visually-hidden" disabled>
-                <label for="mountain-bell" class="group-check__name">Гора-Колокол</label>
+              <div class="checkbox-wrapper__item checkbox">
+                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="checkbox__input visually-hidden" disabled>
+                <label for="mountain-bell" class="checkbox__name">Гора-Колокол</label>
               </div>
 
-              <div class="checkbox-wrapper__item">
-                <input id="slide-park" type="checkbox" name="slide-park" class="group-check__input visually-hidden" checked disabled>
-                <label for="slide-park" class="group-check__name">Слайд-парк</label>
+              <div class="checkbox-wrapper__item checkbox">
+                <input id="slide-park" type="checkbox" name="slide-park" class="checkbox__input visually-hidden" checked disabled>
+                <label for="slide-park" class="checkbox__name">Слайд-парк</label>
               </div>
 
-              <div class="checkbox-wrapper__item">
-                <input id="red-rocks" type="checkbox" name="red-rocks" class="group-check__input visually-hidden">
-                <label for="red-rocks" class="group-check__name">Красные скалы</label>
+              <div class="checkbox-wrapper__item checkbox">
+                <input id="red-rocks" type="checkbox" name="red-rocks" class="checkbox__input visually-hidden">
+                <label for="red-rocks" class="checkbox__name">Красные скалы</label>
               </div>
               </div>
 
@@ -159,10 +159,10 @@
               <textarea id="emotions-letter" name="emotions" placeholder="Опишите подробно все свои восторги" class="group-input__textarea"></textarea>
 
             </fieldset>
-            <div class="form-wrapper">
+            <div class="form__button-wrapper">
               <button class="button feedback__button-send" type="submit">Отправить отзыв</button>
             </div>
-          <p class="required">* &mdash; обязательные поля</p>
+          <p class="form__required">* &mdash; обязательные поля</p>
           </form>
 
       </section>
@@ -213,15 +213,15 @@
     </footer>
 
     <div class="failure pop-up">
-      <h2 class="pop-up__heading failure-heading">Что-то пошло <span class="failure-heading__break">не так!</span></h2>
-      <p class="pop-up__message">Проверьте поля, выделенные красным, скорее всего вы забыли&nbsp;их заполнить</p>
+      <h2 class="failure__heading failure-heading">Что-то пошло <span class="failure-heading__break">не так!</span></h2>
+      <p class="failure__message">Проверьте поля, выделенные красным, скорее всего вы забыли&nbsp;их заполнить</p>
       <button type="button" class="button failure__close">Ок</button>
     </div>
 
     <div class="success pop-up">
-      <h2 class="pop-up__heading">Ваш отзыв отправлен!</h2>
-      <p class="pop-up__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее&nbsp;время мы опубликуем его на сайте.</p>
-      <div class="pop-up__button-wrapper">
+      <h2 class="success__heading success-heading">Ваш отзыв отправлен!</h2>
+      <p class="success__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее&nbsp;время мы опубликуем его на сайте.</p>
+      <div class="success__button-wrapper">
         <button type="button" class="button success__close">Закрыть окно</button>
       </div>
       </div>

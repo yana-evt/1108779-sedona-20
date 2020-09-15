@@ -1,15 +1,16 @@
 
-.form__group {
-  border: none;
-}
-
 .group-input__name {
   font-size: @fs-main;
   text-align: left;
+  margin-right: 14px;
 }
 
-.label-contacts__additional {
-  display: none;
+.group-input__name--contacts {
+  display: block;
+  text-align: left;
+  padding-left: 22px;
+  padding-bottom: 8px;
+  padding-top: 12px;
 }
 
 .group-input__input {
@@ -20,6 +21,7 @@
   padding-left: 22px;
   width: 100%;
   height: 58px;
+  position: relative;
 
   &:hover {
     background-color: @color-disabled-grey;
@@ -41,10 +43,24 @@
 }
 
 .group-input__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 0;
   background-color: @color-bg-form-grey;
   border: none;
   resize: none;
   margin-top: 12px;
+}
+
+.group-input__textarea::placeholder {
+  padding-left: 20px;
+  padding-top: 18px;
+  line-height: 25px;
+}
+
+.group-input__heading {
+  font-size: @fs-heading-small;
+  font-weight: bold;
 }
 
 .group-input__heading--user {
@@ -96,6 +112,10 @@
 }
 
 .group-input__wrapper--phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
 
   &::before {
@@ -151,12 +171,25 @@
   }
 }
 
+.group-input__wrapper--user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+
 .group-input__user .group-input__wrapper--user:last-child {
   margin-bottom: 27px;
 }
 
 @media (min-width: @tablet-width) {
   .group-input__user {
+    grid-area: user;
+    padding-right: 40px;
+    padding-left: 60px;
+
     &::after {
       display: none;
     }
@@ -167,6 +200,14 @@
   }
 
   .group-input__contacts {
+    grid-area: contacts;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
     margin-top: 26px;
     padding-bottom: 35px;
 
@@ -175,16 +216,64 @@
     }
   }
 
+  .group-input__heading {
+    font-size: @fs-heading-medium;
+    font-weight: bold;
+  }
+
   .group-input__heading--user {
     padding: 0;
     padding-bottom: 40px;
+    text-align: left;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -60px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
   }
 
   .group-input__heading--contacts {
     padding-top: 10px;
     padding-bottom: 20px;
-
     margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
+  .group-input__name {
+    margin-right: 14px;
   }
 
   .group-input__name--contacts {
@@ -193,27 +282,163 @@
     margin-bottom: 8px;
   }
 
+  .group-input__heading--text {
+    position: relative;
+    padding-bottom: 45px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -195px;
+      background-color: @color-dark-grey-border;
+      width: 123px;
+      height: 1px;
+    }
+  }
+
   .group-input__textarea {
     margin-top: 52px;
+  }
+
+  .group-input--text {
+    grid-area: text;
+    padding-left: @padding-tablet;
+    padding-right: @padding-tablet;
+  }
+
+  .group-input__wrapper--user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+
+  .group-input__wrapper--phone {
+    margin-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .group-input__user {
+    padding-right: @padding-desktop;
+    padding-left: 80px;
+  }
+
+  .group-input__heading--user {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -80px;
+      background-color: @color-dark-grey-border;
+      width: 1px;
+      height: 292px;
+    }
+  }
+
   .group-input__contacts {
     padding-left: @padding-desktop;
     padding-right: @padding-desktop;
     padding-bottom: 29px;
   }
 
+  .group-input__heading--contacts {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19px;
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
   .group-input__name--contacts {
     padding-left: 0;
   }
 
-  .label-contacts__main {
-    display: none;
+  .group-input__wrapper--phone {
+    width: 33%;
+    margin-right: 80px;
   }
 
-  .label-contacts__additional {
-    display: block;
+  .group-input__wrapper--email {
+    width: 33%;
+  }
+
+  .group-input__wrapper--contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 49px;
+  }
+
+  .group-input--text {
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
+  }
+
+  .group-input__heading--text {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: -353px;
+      background-color: @color-dark-grey-border;
+      width: 280px;
+      height: 1px;
+    }
   }
 }

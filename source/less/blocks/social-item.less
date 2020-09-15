@@ -1,0 +1,38 @@
+
+.social-item {
+  display: flex;
+  background-color: @color-main;
+  width: 47px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: @color-white;
+}
+
+.social-item__link {
+  display: flex;
+  background-color: @color-main;
+  width: 47px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  color: @color-white;
+  line-height: 0;
+  font-size: 0;
+
+  &:focus {
+    background-color: @color-bg-button-hover;
+  }
+
+  &:hover {
+    background-color: @color-bg-button-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @color-bg-button-active;
+  }
+}
