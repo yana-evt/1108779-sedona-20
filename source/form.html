@@ -63,17 +63,18 @@
 
               <legend class="group-input__heading group-input__heading--user">Представьтесь:</legend>
 
-              <div class="group-input__wrapper group-input__wrapper--user">
-                <label for="name" class="group-input__name">Имя*:</label>
-                  <input id="name" type="text" name="name" placeholder="Петр" class="group-input__input" required>
-              </div>
+
               <div class="group-input__wrapper group-input__wrapper--user">
                 <label for="surname" class="group-input__name">Фамилия*:</label>
-                  <input id="surname" type="text" name="surname" placeholder="Иванов" class="group-input__input" required>
+                  <input id="surname" type="text" name="surname" placeholder="Иванов" class="group-input__input group-input__input--size" required>
+              </div>
+              <div class="group-input__wrapper group-input__wrapper--user">
+                <label for="name" class="group-input__name">Имя*:</label>
+                <input id="name" type="text" name="name" placeholder="Петр" class="group-input__input group-input__input--size" required>
               </div>
               <div class="group-input__wrapper group-input__wrapper--user">
                 <label for="second-name" class="group-input__name">Отчество:</label>
-                  <input id="second-name" type="text" name="second-name" placeholder="Александрович" class="group-input__input">
+                  <input id="second-name" type="text" name="second-name" placeholder="Александрович" class="group-input__input group-input__input--size">
               </div>
 
             </fieldset>
@@ -112,7 +113,7 @@
 
               <div class="group-radio__wrapper">
 
-                <input id="negative" type="radio" name="impression" value="negative" class="group-radio__input visually-hidden" checked disabled>
+                <input id="negative" type="radio" name="impression" value="negative" class="group-radio__input visually-hidden">
                 <label for="negative" class="group-radio__name">Скорее отрицательное</label>
 
               </div>
@@ -131,17 +132,17 @@
               <legend class="group-check__heading checkbox-heading">Посещенные <span class="checkbox-heading__break">достопримечательности:</span></legend>
               <div class="group-check__wrapper checkbox-wrapper">
               <div class="checkbox-wrapper__item checkbox">
-                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="checkbox__input visually-hidden" checked>
+                <input id="devils-bridge" type="checkbox" name="devils-bridge" class="checkbox__input visually-hidden">
                 <label for="devils-bridge" class="checkbox__name">Мост Дьявола</label>
               </div>
 
               <div class="checkbox-wrapper__item checkbox">
-                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="checkbox__input visually-hidden" disabled>
+                <input id="mountain-bell" type="checkbox" name="mountain-bell" class="checkbox__input visually-hidden">
                 <label for="mountain-bell" class="checkbox__name">Гора-Колокол</label>
               </div>
 
               <div class="checkbox-wrapper__item checkbox">
-                <input id="slide-park" type="checkbox" name="slide-park" class="checkbox__input visually-hidden" checked disabled>
+                <input id="slide-park" type="checkbox" name="slide-park" class="checkbox__input visually-hidden">
                 <label for="slide-park" class="checkbox__name">Слайд-парк</label>
               </div>
 
